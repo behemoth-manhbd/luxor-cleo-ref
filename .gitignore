@@ -5,3 +5,6 @@ dist/
 *.log
 tsconfig.tsbuildinfo
 .vite/
+.env
+.env.*
+!.env.example
