@@ -1,0 +1,1555 @@
+{
+  "status": "verified",
+  "max_rounds": 2,
+  "rounds_used": 2,
+  "stopped_reason": "max_rounds",
+  "per_round": [
+    {
+      "round": 1,
+      "cassette_key": "luxor-of-cleopatra-v3:ac6cbdb513d4d56f",
+      "verdicts": 64,
+      "rejected": [
+        {
+          "reason": "section_not_found",
+          "doc": "test-vectors.md",
+          "section": "TV-06 — Wild (wild_pyramid) substitution on reel 2",
+          "claim": "gold_scarab 3-of via wild sub, win = 0.5 x 2.0 x 1 = $1.00",
+          "verdict": "contradicted",
+          "action": "fix"
+        },
+        {
+          "reason": "section_not_found",
+          "doc": "test-vectors.md",
+          "section": "TV-08 — Wild-multiplier single (x2) in free spins",
+          "claim": "sym_k 3-of base $0.50, x2 wild -> $1.00; vault_update: +10x bet from the wild hit",
+          "verdict": "contradicted",
+          "action": "fix"
+        },
+        {
+          "reason": "section_not_found",
+          "doc": "test-vectors.md",
+          "section": "TV-09 — Wild-multiplier stacking (x2 x x2 = x4) in free spins",
+          "claim": "sym_k 4-of base $3.00, two x2 wilds multiply to x4 -> $12.00",
+          "verdict": "verified",
+          "action": "keep"
+        }
+      ],
+      "applied": {
+        "delete": 0,
+        "fix": 13,
+        "mark": 9
+      },
+      "guard_tripped": false
+    },
+    {
+      "round": 2,
+      "cassette_key": "luxor-of-cleopatra-v3:163c6aa917795fc5",
+      "verdicts": 56,
+      "rejected": [],
+      "applied": {
+        "delete": 0,
+        "fix": 3,
+        "mark": 1
+      },
+      "guard_tripped": false
+    }
+  ],
+  "changes": {
+    "deleted_docs": [],
+    "deleted_sections": [],
+    "fixed_sections": [
+      "event-order-and-determinism.md#RNG Contract",
+      "math-and-rtp.md#Full paytable",
+      "presentation-and-feel.md#Multiplier Effects",
+      "presentation-and-feel.md#Juice Moments",
+      "product-spec.md#Symbol Table",
+      "vault-mechanics.md#Trigger",
+      "vault-mechanics.md#Parameters",
+      "vault-mechanics.md#Algorithm",
+      "vault-mechanics.md#Interactions",
+      "vault-mechanics.md#QA checklist",
+      "wild_multiplier-mechanics.md#Parameters",
+      "wild_multiplier-mechanics.md#Algorithm",
+      "wild_multiplier-mechanics.md#Interactions",
+      "math-and-rtp.md#Full paytable",
+      "product-spec.md#Symbol Table",
+      "wild_multiplier-mechanics.md#Edge cases"
+    ],
+    "marked_sections": [
+      "buy_feature-mechanics.md#State",
+      "buy_feature-mechanics.md#Interactions",
+      "buy_feature-mechanics.md#Edge cases",
+      "free_spins-mechanics.md#State",
+      "math-and-rtp.md#Derivability / provenance note",
+      "presentation-and-feel.md#Sources & Confidence",
+      "presentation-and-feel.md#Presentation Event Timeline",
+      "vault-mechanics.md#State",
+      "wild_multiplier-mechanics.md#State",
+      "math-and-rtp.md#How RTP is achieved (distribution)"
+    ]
+  },
+  "coverage_before": 0.921667,
+  "coverage_after": 0.921667,
+  "prompt_version": 2,
+  "model": "sonnet",
+  "all_verdicts": [
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "Trigger",
+      "claim": "Buy Feature costs 30x total bet ($60 on $2), confirmed via CONFIRM BUY dialog",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "03-buy-feature-modal.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "Parameters",
+      "claim": "Cost 30x bet, guaranteed exactly 3 scatters, 10 free spins, 3-scatter pay = 1x bet, RTP 96.56%",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-3.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "Algorithm",
+      "claim": "On confirm, deduct 30x bet, force a spin landing exactly 3 scatters, pay 1x scatter award, enter free spins",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-3.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "State",
+      "claim": "Transient buyCost/confirmed state, no persistence beyond FS entry",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "Interactions",
+      "claim": "Buy is alternate entry into free_spins/vault; cost scales with bet",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "Edge cases",
+      "claim": "Insufficient credit blocks purchase; buy always exactly 3 scatters; cancel doesn't deduct",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "QA checklist",
+      "claim": "Buy deducts $60, lands exactly 3 scatters, pays $2, starts 10 FS; cancel leaves credit unchanged",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "03-buy-feature-modal.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "event-order-and-determinism.md",
+      "section": "Canonical Event IDs",
+      "claim": "Internal event taxonomy (spin_start, bet_deduct, reels_land, etc.)",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "event-order-and-determinism.md",
+      "section": "Deterministic Spin Event Order",
+      "claim": "Fixed base-spin and free-spins-loop event ordering, buy mode has no random base outcome",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-3.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "event-order-and-determinism.md",
+      "section": "Ordering Invariants",
+      "claim": "wild_multiplier_apply after ways_evaluate/before win_detect; vault_resolve once at fs_end; win_cap_clamp after all multipliers summed",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "event-order-and-determinism.md",
+      "section": "RNG Contract",
+      "claim": "Seeded PRNG stub contract; draw-order table with wild_multiplier value drawn per-reel then cleopatra mark-position resolved at vault_update",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "fix",
+      "replacement": "The draw-order table's step \"FS-only: wild_multiplier placement/value per reel\" is misleading: the wild_multiplier's own multiplier is fixed at x2 (not drawn), but the VAULT increment triggered by a wild-multiplier hit IS a random draw from a fixed table of possible values that depends on how many wild_multiplier symbols hit simultaneously (1 hit: 1x/1.5x/2x/2.5x/5x/12.5x/25x/50x bet; 2 hits: 5x/10x/25x/50x/100x/250x/500x/2500x bet; and so on up to 6+ hits). This VAULT-increment draw must be an explicit, separately documented draw position — it is not the same thing as \"wild_multiplier value per reel.\""
+    },
+    {
+      "doc": "event-order-and-determinism.md",
+      "section": "Replay & Golden Snapshots",
+      "claim": "Same (seed, stake, mode) reproduces identical board/wins/vault updates",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "Trigger",
+      "claim": "3+ scatter_lotus anywhere in base spin triggers 10 free spins",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "Parameters",
+      "claim": "10 spins, no retrigger, scatter-in-FS adds 10x/50x/250x to VAULT, wild_multiplier x2 introduced",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-3.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "Algorithm",
+      "claim": "On 3+ scatter, pay scatter award, set 10 spins, activate VAULT at 20x bet, auto-advance spins, resolve VAULT at end",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "State",
+      "claim": "Per-spin and per-round state variables",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "Interactions",
+      "claim": "Same ways evaluation as base; wild_multiplier/vault exclusive to FS; buy is alternate entry",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "Edge cases",
+      "claim": "No retrigger — extra scatters divert to VAULT; round win capped at 12,500x bet",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-3.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "QA checklist",
+      "claim": "3-scatter base spin sets 10 spins; in-FS 3+ scatter doesn't add spins but adds VAULT; round ends with control returning to base",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "math-and-rtp.md",
+      "section": "Headline figures",
+      "claim": "Base RTP 96.51%, buy RTP 96.56%, max win 12,500x, bet $0.20-$240, 1024 ways",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-4.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "math-and-rtp.md",
+      "section": "How RTP is achieved (distribution)",
+      "claim": "Win = payValue x totalBet x ways; strip weights proprietary/not derivable",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "math-and-rtp.md",
+      "section": "Full paytable",
+      "claim": "Exact per-symbol paytable multipliers as listed (cleopatra 0.25/2.5/3.75/5; ankh_ring & gold_scarab 0.5/2/4; cleopatra_coin & eye_of_horus 1/2/3.5; sym_q/sym_j 0.2/1/2.5; sym_10/sym_9 0.15/0.8/2; wild_pyramid only pays at 5-of)",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "fix",
+      "replacement": "The in-game paytable (screenshots paytable-1.webp, paytable-2.webp) shows different per-symbol dollar payouts than listed here (values shown as paid on a $2.00 total bet):\n\n| id | 2 | 3 | 4 | 5 |\n|---|---|---|---|---|\n| cleopatra | $0.50 | $5.00 | $7.50 | $10.00 |\n| high-tier pair A (ring/scarab-type) | $0.20 | $4.00 | $6.00 | $8.00 |\n| high-tier pair B (coin/eye-type) | — | $2.00 | $5.00 | $7.00 |\n| sym_a / sym_k | — | $0.50 | $3.00 | $6.00 |\n| sym_q / sym_j | — | $0.30 | $2.00 | $5.00 |\n| sym_10 / sym_9 | — | $0.30 | $1.00 | $4.00 |\n| wild_pyramid | $1.00 | $10.00 | $25.00 | $50.00 |\n| scatter_lotus | — | $2.00 (1x) | $10.00 (5x) | $50.00 (25x) |\n\nOnly `cleopatra`, `sym_a`, `sym_k`, and `scatter_lotus` match the values documented here exactly. `sym_q`/`sym_j`, `sym_10`/`sym_9`, and the two high-tier pairs all diverge from the documented figures at one or more count bands, and `wild_pyramid` pays at 2/3/4-of-a-kind too (not just 5-of as documented). Exact symbol-ID-to-icon mapping should be re-confirmed against paytable-1.webp/paytable-2.webp before finalizing IDs."
+    },
+    {
+      "doc": "math-and-rtp.md",
+      "section": "Derivability / provenance note",
+      "claim": "Field-by-field derivability/confidence status table",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Sources & Confidence",
+      "claim": "Meta-list of what was/wasn't observed live",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Reel Motion & Timing (incl. turbo diff)",
+      "claim": "Static single resolve, no cascade; turbo shows motion blur and auto-advances multiple spins",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "frame-0001.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Anticipation",
+      "claim": "Golden Cleopatra close-up heralds FS entry; scatter slow-down anticipation not confirmed",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "04-freespins-intro.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Win Presentation Tiers",
+      "claim": "Small win = highlight only; NICE and SENSATIONAL tiers with winged-goddess artwork; higher tiers may exist unobserved",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "11-sensational-win-83.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Cascade & Tumble Feel",
+      "claim": "Not applicable — game has no cascade mechanic",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "02-no-win-board.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Multiplier Effects",
+      "claim": "Wild multiplier lands as x2 gold-coin orb; on landing the VAULT value animates upward with \"+$10 flies into the meter\"",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "fix",
+      "replacement": "`wild_multiplier` lands as a gold-coin orb showing x2; on landing the VAULT value animates upward with a flying \"+$\" amount. The amount is NOT a fixed +$10 — the in-game rules state it is a random draw from a fixed table of possible values, and the table depends on how many wild_multiplier symbols hit in the same spin (e.g. one hit: 1x/1.5x/2x/2.5x/5x/12.5x/25x/50x bet). The observed +$10 (5x on a $2 bet) was one specific outcome of that draw, not the standard amount."
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Symbol Animations (idle vs win)",
+      "claim": "Winning symbols gold-sparkle highlight; FS special reels show red-bordered background",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "06-freespins-vault-progress.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Ambient & Audio",
+      "claim": "Ambient/Sound FX toggles exist; day scene base game, night scene with moon in FS",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-6.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Transitions",
+      "claim": "Golden Cleopatra face wipe into \"CONGRATULATIONS! YOU HAVE WON 10 FREE SPINS\" scroll; FS exit via \"LAST FREE SPIN\"/outro modal",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "05-freespins-congrats.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Presentation Event Timeline",
+      "claim": "Ordered list of presentation cues with approximate durations",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Juice Moments",
+      "claim": "SENSATIONAL coin-shower roll-up; VAULT \"+$10 flies into the meter\" tension driver; day-to-night flip",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "fix",
+      "replacement": "VAULT \"+$ flies into the meter\" moment with red key-badge marking of grid cells — the flown-in amount is a random draw from a table (not a fixed +$10); see [[wild_multiplier-mechanics]] for the exact value table."
+    },
+    {
+      "doc": "product-spec.md",
+      "section": "Identity",
+      "claim": "Name, provider, theme, gameId, demo URL",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "01-loaded.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "product-spec.md",
+      "section": "Grid",
+      "claim": "4 rows x 5 cols, 1024 ways, no cascade; win rule with cleopatra paying from 2 reels, others from 3, scatter pays anywhere",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "product-spec.md",
+      "section": "Symbol Table",
+      "claim": "Full per-symbol pay table and roster of 6 high-tier regulars + 6 low-tier + wild_pyramid + wild_multiplier + scatter",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "fix",
+      "replacement": "See corrected paytable in [[math-and-rtp]] — the values documented here for `ankh_ring`, `gold_scarab`, `cleopatra_coin`, `eye_of_horus`, `sym_q`, `sym_j`, `sym_10`, `sym_9`, and `wild_pyramid`'s 2/3/4-of bands do not match the in-game paytable (paytable-1.webp, paytable-2.webp). Only `cleopatra`, `sym_a`, `sym_k`, and `scatter_lotus` match exactly. Re-derive the table from the screenshots before relying on it."
+    },
+    {
+      "doc": "product-spec.md",
+      "section": "Bet Model",
+      "claim": "Min $0.20, max $240.00, buy cost 30x bet, no ante bet",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-4.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "product-spec.md",
+      "section": "Feature Index",
+      "claim": "Summary pointers to free_spins, vault, buy_feature, wild_multiplier features",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "Conventions",
+      "claim": "4x5 board notation, bet=$2.0, no cascade, refill-injection rule, wild placement restrictions",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "TV-01 — No-win board",
+      "claim": "No adjacency match, win = $0.00",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "02-no-win-board.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "TV-02 — Exact threshold (count == minimum), cleopatra 2-of",
+      "claim": "Cleopatra 2-of ways=1, win = 0.25 x 2.0 x 1 = $0.50",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "TV-03 — Pay-band, ram_coin 3-of (ways = 1)",
+      "claim": "ram_coin 3-of ways=1, win = 0.75 x 2.0 x 1 = $1.50",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "TV-04 — Pay-band boundary, ram_coin 4-of (ways = 1)",
+      "claim": "ram_coin 4-of ways=1, win = 2.0 x 2.0 x 1 = $4.00",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "TV-05 — Two symbols winning simultaneously",
+      "claim": "sym_a 3-of ($0.50) + eye_of_horus 3-of ($2.00) sum to $2.50",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "TV-07 — Scatter trigger (3 scatters)",
+      "claim": "3 scatters trigger 10 free spins + pay 1 x 2.0 = $2.00",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "TV-10 — Max-win cap clamp",
+      "claim": "Clamp raw win to min(raw, 12,500 x bet)",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-3.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "TV-11 — Buy-feature cost arithmetic",
+      "claim": "Cost = 30 x 2.0 = $60; bought spin lands exactly 3 scatters, pays $2.00, starts 10 free spins",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "03-buy-feature-modal.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "TV-12 — Ways multiplication (cleopatra 5-of, stacked)",
+      "claim": "Cleopatra 5-of ways=4, win = 5 x 2.0 x 4 = $40.00",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "Coverage checklist",
+      "claim": "Index mapping rules to vectors",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "Trigger",
+      "claim": "VAULT active only during FS, starts at 20x bet, 8 of 20 positions pre-marked on entry",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-3.webp"
+      },
+      "action": "fix",
+      "replacement": "Active only during free spins. Starting value: 20 x total bet (confirmed in-game: \"The VAULT starts with a value of 20x total bet\"). Pre-marked positions: 8 of 20, marked on reels 2, 3, or 4 — but per the in-game rules text this marking happens **after the first free spin resolves**, not at FS entry: \"When the round starts, after the first free spin, 8 random positions on the screen on reels 2, 3 or 4 are marked.\""
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "Parameters",
+      "claim": "Start 20x bet, 20 positions, 8 pre-marked, wild-multiplier increment fixed +10x bet per x2 wild hit, scatter increments 10x/50x/250x, marking via cleopatra, payout only at 20/20, cap 12,500x",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "fix",
+      "replacement": "| Constant | Value | Source |\n|---|---|---|\n| Start value | 20x total bet | in-game paytable |\n| Total positions | 20 | in-game paytable |\n| Pre-marked at start | 8, on reels 2/3/4, applied after the first free spin | in-game paytable |\n| Wild-multiplier increment | Random draw from a table, keyed to the number of wild_multiplier symbols hit in that spin: 1 hit → {1x,1.5x,2x,2.5x,5x,12.5x,25x,50x}; 2 hits → {5x,10x,25x,50x,100x,250x,500x,2500x}; 3 hits → {7.5x,15x,37.5x,75x,150x,375x,750x,12500x}; 4 hits → {10x,20x,50x,100x,200x,500x,1000x,12500x}; 5 hits → {12.5x,25x,62.5x,125x,250x,625x,1250x,12500x}; 6+ hits → {15x,30x,75x,150x,300x,750x,1500x,12500x} (all x total bet) | in-game paytable |\n| Scatter increment (in FS) | 3→10x, 4→50x, 5→250x total bet | in-game paytable |\n| Marking symbol | cleopatra | in-game paytable |\n| Payout condition | ALL 20 positions marked before round end | in-game paytable |\n| Cap | 12,500x total bet | in-game paytable |"
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "Algorithm",
+      "claim": "Step 1: vaultMarked=8 seeded on FS entry; Step 2b: vaultValue += 10 x totalBet per wild hit",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "fix",
+      "replacement": "1. On FS entry: `vaultValue = 20 x totalBet`; `vaultMarked = 0`.\n2. After the first free spin resolves: mark 8 random unmarked positions on reels 2, 3, or 4 (`vaultMarked = 8`).\n3. Per free spin, after ways evaluation:\n   a. For each `cleopatra` landed on an unmarked position, mark it.\n   b. For each spin where one or more `wild_multiplier` symbols hit, add a random amount to `vaultValue` drawn from the table keyed by the number of simultaneous wild_multiplier hits (see Parameters).\n   c. If ≥3 scatters landed: `vaultValue += {10,50,250}[band] x totalBet`.\n   d. `vaultValue = min(vaultValue, 12500 x totalBet)`.\n4. At round end: award `vaultValue` only if `vaultMarked == 20`, else forfeit."
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "State",
+      "claim": "Per-spin/per-round vault state variables",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "Interactions",
+      "claim": "\"each x2 wild hit adds +10x to the meter\"",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "fix",
+      "replacement": "**[[wild_multiplier-mechanics]]:** each spin with one or more x2 wild hits adds a random amount to the meter, drawn from a table keyed by the number of simultaneous hits (see [[vault-mechanics]] Parameters) — not a fixed +10x."
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "Edge cases",
+      "claim": "Never completed live (19/20 closest), marking is monotonic, cap clamp applies",
+      "verdict": "verified",
+      "evidence": {
+        "type": "observations",
+        "ref": "vaultFeature.closestApproach"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "QA checklist",
+      "claim": "vaultMarked<20 forfeits; each x2 wild hit increments vaultValue by exactly 10x bet; vaultValue never exceeds cap",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "fix",
+      "replacement": "1. `vaultMarked < 20` at round end ⇒ meter pays 0 (forfeit); round total excludes vaultValue.\n2. Each spin where one or more x2 `wild_multiplier` symbols hit adds a random VAULT increment drawn from the value-count-keyed table (never a fixed 10x).\n3. `vaultValue` after any increment never exceeds `12500 x totalBet`."
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "Trigger",
+      "claim": "wild_multiplier lands only during FS, fixed x2 multiplier",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "Parameters",
+      "claim": "x2 fixed, appears reels 1/3/5 observed, substitutes all but scatter, multiplicative stacking, VAULT contribution +10x bet per hit, no standalone pay",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "fix",
+      "replacement": "VAULT contribution: a spin with one or more x2 wild hits adds a random amount to the VAULT, drawn from a table keyed by the number of simultaneous hits that spin (1 hit → {1x,1.5x,2x,2.5x,5x,12.5x,25x,50x} bet; 2 hits → {5x,10x,25x,50x,100x,250x,500x,2500x} bet; etc. up to 6+ hits) — not a fixed +10x. All other rows (multiplier value x2, all-reels appearance in FS, substitution, multiplicative stacking, no standalone pay) are confirmed by the in-game paytable."
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "Algorithm",
+      "claim": "Step 6: Feed VAULT — for each x2 wild hit, vaultValue += 10 x totalBet",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "fix",
+      "replacement": "6. Feed VAULT: if one or more `wild_multiplier` symbols hit this spin, add a random amount to `vaultValue`, drawn from the table keyed by the count of simultaneous hits (see [[vault-mechanics]] Parameters) — not a fixed 10x total bet."
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "State",
+      "claim": "Per-spin wildCells/k/M state",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": ""
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "Interactions",
+      "claim": "\"each hit increments the meter by 10x bet\"",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "fix",
+      "replacement": "**[[vault-mechanics]]:** each spin with one or more hits adds a random amount to the meter (see table in [[vault-mechanics]] Parameters), not a fixed 10x bet."
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "Edge cases",
+      "claim": "Two+ wilds in one way multiply; values >x2 may exist but unobserved; win cap still applies",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "QA checklist",
+      "claim": "One x2 wild doubles a way; two x2 wilds quadruple it; wild_multiplier never appears in base game",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "Trigger",
+      "claim": "BUY FEATURE button + CONFIRM BUY dialog gate; cost 30x total bet ($60 on $2)",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "03-buy-feature-modal.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "Parameters",
+      "claim": "Cost 30x, guaranteed 3 scatters, 10 free spins awarded, 3-scatter award=1x bet, RTP 96.56%, confirmation gate",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-3.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "Algorithm",
+      "claim": "Buy flow: cost modal -> confirm -> deduct -> force exactly 3 scatters -> pay 1x -> enter 10 free spins",
+      "verdict": "verified",
+      "evidence": {
+        "type": "observations",
+        "ref": "observations.buyFeature"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "State",
+      "claim": "Transient buyCost/confirmed state, no persistence beyond FS entry",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": null
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "Interactions",
+      "claim": "Buy is an alternate FS entry; identical thereafter; VAULT activates same as natural trigger",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": null
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "Edge cases",
+      "claim": "Insufficient credit blocks purchase; always exactly 3 scatters; cancel path doesn't deduct",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": null
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "buy_feature-mechanics.md",
+      "section": "QA checklist",
+      "claim": "$60 deduction on $2 bet, exactly 3 scatters pay $2 then start 10 FS, cancel leaves credit unchanged",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "03-buy-feature-modal.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "event-order-and-determinism.md",
+      "section": "Canonical Event IDs",
+      "claim": "Internal event-id/payload schema for the spin lifecycle",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": null
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "event-order-and-determinism.md",
+      "section": "Deterministic Spin Event Order",
+      "claim": "Base-spin and free-spins event sequencing (spin_start...round_end; FS loop with no retrigger)",
+      "verdict": "verified",
+      "evidence": {
+        "type": "observations",
+        "ref": "observations.eventOrderSingleBaseSpin"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "event-order-and-determinism.md",
+      "section": "Ordering Invariants",
+      "claim": "bet_deduct before reels_land; wild_multiplier_apply between ways_evaluate and win_detect; vault_resolve once at fs_end",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": null
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "event-order-and-determinism.md",
+      "section": "RNG Contract",
+      "claim": "VAULT increment is a random draw from a table keyed by simultaneous wild_multiplier hit count (1..6+), distinct from the wild's own fixed x2 value",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "event-order-and-determinism.md",
+      "section": "Replay & Golden Snapshots",
+      "claim": "Spins reproduce from (seed, stake, mode); rule changes invalidate golden snapshots",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": null
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "Trigger",
+      "claim": "3+ scatter_lotus anywhere in a base spin triggers 10 free spins, each count pays its own award",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "Parameters",
+      "claim": "10 spins, no retrigger, scatter-in-FS adds 10x/50x/250x to VAULT, wild_multiplier introduced",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-3.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "Algorithm",
+      "claim": "FS resolution loop: spin, evaluate, apply multiplier, update vault, decrement counter, resolve on exhaustion",
+      "verdict": "verified",
+      "evidence": {
+        "type": "observations",
+        "ref": "observations.freeSpins.roundsPlayed"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "State",
+      "claim": "Per-spin and per-round transient state (freeSpinsRemaining, roundWinTotal, vaultValue, vaultMarked)",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": null
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "Interactions",
+      "claim": "Same 1024-ways evaluation as base; wild_multiplier/vault activate only here; buy_feature is alternate entry",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "Edge cases",
+      "claim": "No retrigger (extra scatters divert to VAULT); round win capped at 12,500x; empty spin still decrements counter",
+      "verdict": "verified",
+      "evidence": {
+        "type": "observations",
+        "ref": "observations.freeSpins.retriggerNote"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "free_spins-mechanics.md",
+      "section": "QA checklist",
+      "claim": "3 scatters sets 10 spins + pays once; 3+ scatters during FS doesn't add spins but feeds VAULT; round ends with credited total",
+      "verdict": "verified",
+      "evidence": {
+        "type": "observations",
+        "ref": "observations.freeSpins"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "math-and-rtp.md",
+      "section": "Headline figures",
+      "claim": "Base RTP 96.51%, buy RTP 96.56%, volatility high, max win 12,500x, ways 1024, hit freq ~32% (unsourced placeholder)",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-4.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "math-and-rtp.md",
+      "section": "How RTP is achieved (distribution)",
+      "claim": "RTP delivered via proprietary, non-derivable reel-strip weights; VAULT/wild-multiplier carry the volatility tail",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": null
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "math-and-rtp.md",
+      "section": "Full paytable",
+      "claim": "Only cleopatra/sym_a/sym_k/scatter_lotus match the in-game paytable exactly; ankh_ring, gold_scarab, cleopatra_coin, eye_of_horus, sym_q/j, sym_10/9 and wild_pyramid's 2/3/4-band all diverge",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "fix",
+      "replacement": "The in-game paytable (paytable-1.webp page 1/6, paytable-2.webp page 2/6) shows these per-symbol dollar payouts on a $2.00 total bet:\n\n| id | 2 | 3 | 4 | 5 |\n|---|---|---|---|---|\n| cleopatra | $0.50 | $5.00 | $7.50 | $10.00 |\n| ankh_ring / gold_scarab (identical pay) | $0.20 | $4.00 | $6.00 | $8.00 |\n| cleopatra_coin / eye_of_horus (identical pay) | — | $2.00 | $5.00 | $7.00 |\n| sym_a / sym_k | — | $0.50 | $3.00 | $6.00 |\n| sym_q / sym_j | — | $0.30 | $2.00 | $5.00 |\n| sym_10 / sym_9 | — | $0.30 | $1.00 | $4.00 |\n| scatter_lotus | — | $2.00 (1x) | $10.00 (5x) | $50.00 (25x) |\n\nAll of the above match the in-game paytable exactly (paytable-1.webp). `wild_pyramid` (the base WILD, reels 2/3/4) has NO standalone payout — paytable-1.webp shows only substitution text, no dollar figures. The $1.00/$10.00/$25.00/$50.00 row previously attributed to `wild_pyramid` actually belongs to the separate `wild_multiplier` symbol (paytable-2.webp: the free-spins-only x2 wild). `ram_coin`'s distinct icon/payout could not be confirmed against the paytable screenshots and remains estimated."
+    },
+    {
+      "doc": "math-and-rtp.md",
+      "section": "Derivability / provenance note",
+      "claim": "Meta-table restating field confidence/derivability status",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": null
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Sources & Confidence",
+      "claim": "Lists what was/wasn't observed live this session",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": null
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Reel Motion & Timing (incl. turbo diff)",
+      "claim": "Static single resolution, no cascade; turbo shows heavy motion blur and rapid auto-advance",
+      "verdict": "verified",
+      "evidence": {
+        "type": "observations",
+        "ref": "observations.cascade"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Anticipation",
+      "claim": "FS entry heralded by golden Cleopatra close-up with sparkle particles; scatter slow-down anticipation assumed",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "04-freespins-intro.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Win Presentation Tiers",
+      "claim": "Small win = sparkle only; NICE! and SENSATIONAL! = winged-goddess/Isis artwork with escalating particle effects",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "11-sensational-win-83.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Cascade & Tumble Feel",
+      "claim": "Not applicable — no cascade mechanic present",
+      "verdict": "verified",
+      "evidence": {
+        "type": "observations",
+        "ref": "observations.cascade"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Multiplier Effects",
+      "claim": "wild_multiplier lands as x2 gold-coin orb; VAULT +$ amount is a random table draw, not a fixed +$10",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Symbol Animations (idle vs win)",
+      "claim": "Winning symbols gold-sparkle highlight; FS reels can show a distinct red-bordered special-reel background with stacked cleopatra",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "06-freespins-vault-progress.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Ambient & Audio",
+      "claim": "Ambient Music/Sound FX toggles exist in Settings; day desert base game transitions to night moonlit free spins",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-6.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Transitions",
+      "claim": "Golden Cleopatra sparkle wipe into a parchment/torch 'CONGRATULATIONS! 10 FREE SPINS' scroll; FS exit uses LAST FREE SPIN then a $-won modal",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "05-freespins-congrats.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Presentation Event Timeline",
+      "claim": "Per-event cue table with estimated durations for each lifecycle event",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": null
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "presentation-and-feel.md",
+      "section": "Juice Moments",
+      "claim": "VAULT '+$ flies into meter' with red key-badge cell marking; flown-in amount is a random table draw, not fixed +$10",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "product-spec.md",
+      "section": "Identity",
+      "claim": "Name/provider/theme/gameId/demo URL identity fields",
+      "verdict": "verified",
+      "evidence": {
+        "type": "observations",
+        "ref": "observations.game"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "product-spec.md",
+      "section": "Grid",
+      "claim": "4x5, 1024 ways, no cascade; win rule: cleopatra pays from 2 adjacent reels, other regulars from 3, scatter pays anywhere",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "product-spec.md",
+      "section": "Symbol Table",
+      "claim": "Documented per-symbol values for ankh_ring, gold_scarab, cleopatra_coin, eye_of_horus, sym_q/j, sym_10/9, wild_pyramid 2/3/4-bands do not match the in-game paytable",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "fix",
+      "replacement": "See the corrected paytable in [[math-and-rtp]] (sourced from paytable-1.webp/paytable-2.webp). `cleopatra`, `ankh_ring`, `gold_scarab`, `cleopatra_coin`, `eye_of_horus`, `sym_a`, `sym_k`, `sym_q`, `sym_j`, `sym_10`, `sym_9`, and `scatter_lotus` all match the in-game paytable exactly. The only real discrepancy: the `wild_pyramid` payout figures were misattributed — `wild_pyramid` has no standalone pay (substitution only, reels 2/3/4), and those dollar values actually belong to `wild_multiplier`. `ram_coin`'s icon mapping remains unconfirmed."
+    },
+    {
+      "doc": "product-spec.md",
+      "section": "Bet Model",
+      "claim": "Min $0.20, max $240, buy cost 30x total bet, no ante bet",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-4.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "product-spec.md",
+      "section": "Feature Index",
+      "claim": "free_spins, vault, buy_feature, wild_multiplier feature summaries",
+      "verdict": "verified",
+      "evidence": {
+        "type": "observations",
+        "ref": "observations.freeSpins"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "Conventions",
+      "claim": "4x5 board notation, bet=2.0, ways win formula, no cascade/refill-injection rule",
+      "verdict": "verified",
+      "evidence": {
+        "type": "observations",
+        "ref": "observations.cascade"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "Vectors",
+      "claim": "12 worked examples covering adjacency, pay bands, wild substitution, scatter trigger, wild-multiplier stacking, cap clamp, buy cost, ways multiplication",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-1.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "test-vectors.md",
+      "section": "Coverage checklist",
+      "claim": "Maps each mechanic rule to a covering vector; notes cascade N/A and VAULT completion untested",
+      "verdict": "verified",
+      "evidence": {
+        "type": "observations",
+        "ref": "observations.vaultFeature"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "Trigger",
+      "claim": "VAULT active only in FS, starts at 20x bet, 8 of 20 positions pre-marked on reels 2/3/4 applied after the first free spin resolves",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-3.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "Parameters",
+      "claim": "Start 20x, 20 positions, wild-multiplier increment table keyed by simultaneous hit count, scatter increments 10x/50x/250x, marking symbol cleopatra, payout needs all 20, cap 12,500x",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "Algorithm",
+      "claim": "Vault init, 8-mark after spin 1, per-spin cleopatra marking + wild/scatter increments + cap, payout only if fully marked at round end",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-3.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "State",
+      "claim": "Per-spin/per-round/per-feature vault state tracking",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": null
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "Interactions",
+      "claim": "Wild-multiplier hits add a random table-drawn amount to the meter, not a fixed +10x",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "Edge cases",
+      "claim": "Never completed live (closest 19/20, forfeited); marking is monotonic; cap clamp applies",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "18-vault-19of20-lastspin.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "vault-mechanics.md",
+      "section": "QA checklist",
+      "claim": "vaultMarked<20 forfeits at round end; each spin with x2 wild hit(s) adds a table-drawn increment; vaultValue never exceeds 12,500x",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "Trigger",
+      "claim": "wild_multiplier lands only during free spins, carries a fixed x2 multiplier",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "Parameters",
+      "claim": "VAULT contribution is a random draw keyed by simultaneous wild-hit count, not a fixed +10x",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "Algorithm",
+      "claim": "Feed VAULT with a random table-drawn amount keyed by simultaneous wild hits, not a fixed 10x",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "State",
+      "claim": "Per-spin wildCells/per-way k,M tracking; contributes only to vaultValue",
+      "verdict": "unsupported",
+      "evidence": {
+        "type": "none",
+        "ref": null
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "Interactions",
+      "claim": "Each spin with hit(s) adds a random table-drawn amount to VAULT, not a fixed 10x bet",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "Edge cases",
+      "claim": "Two+ wilds in one way multiply; higher-than-x2 standalone multiplier values may exist but were never observed",
+      "verdict": "contradicted",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "fix",
+      "replacement": "- Two+ wilds in one way multiply (×2×2 = ×4); across different ways they apply independently to each way.\n- The in-game rules state the WILD MULTIPLIER symbol always carries a fixed ×2 multiplier (\"the WILD MULTIPLIER symbol carries a multiplier of x2\", paytable-2.webp) — there is no higher standalone multiplier value; only the VAULT increment amount is randomized, not the wild's own multiplier.\n- Win cap: multiplied total still clamped to 12,500× bet — confirmed in-game (paytable-3.webp/paytable-6.webp)."
+    },
+    {
+      "doc": "wild_multiplier-mechanics.md",
+      "section": "QA checklist",
+      "claim": "One x2 wild doubles the way; two x2 wilds quadruple it; wild_multiplier never appears in base game",
+      "verdict": "verified",
+      "evidence": {
+        "type": "screenshot",
+        "ref": "paytable-2.webp"
+      },
+      "action": "keep",
+      "replacement": null
+    }
+  ],
+  "all_replacements": [
+    "The draw-order table's step \"FS-only: wild_multiplier placement/value per reel\" is misleading: the wild_multiplier's own multiplier is fixed at x2 (not drawn), but the VAULT increment triggered by a wild-multiplier hit IS a random draw from a fixed table of possible values that depends on how many wild_multiplier symbols hit simultaneously (1 hit: 1x/1.5x/2x/2.5x/5x/12.5x/25x/50x bet; 2 hits: 5x/10x/25x/50x/100x/250x/500x/2500x bet; and so on up to 6+ hits). This VAULT-increment draw must be an explicit, separately documented draw position — it is not the same thing as \"wild_multiplier value per reel.\"",
+    "The in-game paytable (screenshots paytable-1.webp, paytable-2.webp) shows different per-symbol dollar payouts than listed here (values shown as paid on a $2.00 total bet):\n\n| id | 2 | 3 | 4 | 5 |\n|---|---|---|---|---|\n| cleopatra | $0.50 | $5.00 | $7.50 | $10.00 |\n| high-tier pair A (ring/scarab-type) | $0.20 | $4.00 | $6.00 | $8.00 |\n| high-tier pair B (coin/eye-type) | — | $2.00 | $5.00 | $7.00 |\n| sym_a / sym_k | — | $0.50 | $3.00 | $6.00 |\n| sym_q / sym_j | — | $0.30 | $2.00 | $5.00 |\n| sym_10 / sym_9 | — | $0.30 | $1.00 | $4.00 |\n| wild_pyramid | $1.00 | $10.00 | $25.00 | $50.00 |\n| scatter_lotus | — | $2.00 (1x) | $10.00 (5x) | $50.00 (25x) |\n\nOnly `cleopatra`, `sym_a`, `sym_k`, and `scatter_lotus` match the values documented here exactly. `sym_q`/`sym_j`, `sym_10`/`sym_9`, and the two high-tier pairs all diverge from the documented figures at one or more count bands, and `wild_pyramid` pays at 2/3/4-of-a-kind too (not just 5-of as documented). Exact symbol-ID-to-icon mapping should be re-confirmed against paytable-1.webp/paytable-2.webp before finalizing IDs.",
+    "`wild_multiplier` lands as a gold-coin orb showing x2; on landing the VAULT value animates upward with a flying \"+$\" amount. The amount is NOT a fixed +$10 — the in-game rules state it is a random draw from a fixed table of possible values, and the table depends on how many wild_multiplier symbols hit in the same spin (e.g. one hit: 1x/1.5x/2x/2.5x/5x/12.5x/25x/50x bet). The observed +$10 (5x on a $2 bet) was one specific outcome of that draw, not the standard amount.",
+    "VAULT \"+$ flies into the meter\" moment with red key-badge marking of grid cells — the flown-in amount is a random draw from a table (not a fixed +$10); see [[wild_multiplier-mechanics]] for the exact value table.",
+    "See corrected paytable in [[math-and-rtp]] — the values documented here for `ankh_ring`, `gold_scarab`, `cleopatra_coin`, `eye_of_horus`, `sym_q`, `sym_j`, `sym_10`, `sym_9`, and `wild_pyramid`'s 2/3/4-of bands do not match the in-game paytable (paytable-1.webp, paytable-2.webp). Only `cleopatra`, `sym_a`, `sym_k`, and `scatter_lotus` match exactly. Re-derive the table from the screenshots before relying on it.",
+    "Active only during free spins. Starting value: 20 x total bet (confirmed in-game: \"The VAULT starts with a value of 20x total bet\"). Pre-marked positions: 8 of 20, marked on reels 2, 3, or 4 — but per the in-game rules text this marking happens **after the first free spin resolves**, not at FS entry: \"When the round starts, after the first free spin, 8 random positions on the screen on reels 2, 3 or 4 are marked.\"",
+    "| Constant | Value | Source |\n|---|---|---|\n| Start value | 20x total bet | in-game paytable |\n| Total positions | 20 | in-game paytable |\n| Pre-marked at start | 8, on reels 2/3/4, applied after the first free spin | in-game paytable |\n| Wild-multiplier increment | Random draw from a table, keyed to the number of wild_multiplier symbols hit in that spin: 1 hit → {1x,1.5x,2x,2.5x,5x,12.5x,25x,50x}; 2 hits → {5x,10x,25x,50x,100x,250x,500x,2500x}; 3 hits → {7.5x,15x,37.5x,75x,150x,375x,750x,12500x}; 4 hits → {10x,20x,50x,100x,200x,500x,1000x,12500x}; 5 hits → {12.5x,25x,62.5x,125x,250x,625x,1250x,12500x}; 6+ hits → {15x,30x,75x,150x,300x,750x,1500x,12500x} (all x total bet) | in-game paytable |\n| Scatter increment (in FS) | 3→10x, 4→50x, 5→250x total bet | in-game paytable |\n| Marking symbol | cleopatra | in-game paytable |\n| Payout condition | ALL 20 positions marked before round end | in-game paytable |\n| Cap | 12,500x total bet | in-game paytable |",
+    "1. On FS entry: `vaultValue = 20 x totalBet`; `vaultMarked = 0`.\n2. After the first free spin resolves: mark 8 random unmarked positions on reels 2, 3, or 4 (`vaultMarked = 8`).\n3. Per free spin, after ways evaluation:\n   a. For each `cleopatra` landed on an unmarked position, mark it.\n   b. For each spin where one or more `wild_multiplier` symbols hit, add a random amount to `vaultValue` drawn from the table keyed by the number of simultaneous wild_multiplier hits (see Parameters).\n   c. If ≥3 scatters landed: `vaultValue += {10,50,250}[band] x totalBet`.\n   d. `vaultValue = min(vaultValue, 12500 x totalBet)`.\n4. At round end: award `vaultValue` only if `vaultMarked == 20`, else forfeit.",
+    "**[[wild_multiplier-mechanics]]:** each spin with one or more x2 wild hits adds a random amount to the meter, drawn from a table keyed by the number of simultaneous hits (see [[vault-mechanics]] Parameters) — not a fixed +10x.",
+    "1. `vaultMarked < 20` at round end ⇒ meter pays 0 (forfeit); round total excludes vaultValue.\n2. Each spin where one or more x2 `wild_multiplier` symbols hit adds a random VAULT increment drawn from the value-count-keyed table (never a fixed 10x).\n3. `vaultValue` after any increment never exceeds `12500 x totalBet`.",
+    "VAULT contribution: a spin with one or more x2 wild hits adds a random amount to the VAULT, drawn from a table keyed by the number of simultaneous hits that spin (1 hit → {1x,1.5x,2x,2.5x,5x,12.5x,25x,50x} bet; 2 hits → {5x,10x,25x,50x,100x,250x,500x,2500x} bet; etc. up to 6+ hits) — not a fixed +10x. All other rows (multiplier value x2, all-reels appearance in FS, substitution, multiplicative stacking, no standalone pay) are confirmed by the in-game paytable.",
+    "6. Feed VAULT: if one or more `wild_multiplier` symbols hit this spin, add a random amount to `vaultValue`, drawn from the table keyed by the count of simultaneous hits (see [[vault-mechanics]] Parameters) — not a fixed 10x total bet.",
+    "**[[vault-mechanics]]:** each spin with one or more hits adds a random amount to the meter (see table in [[vault-mechanics]] Parameters), not a fixed 10x bet.",
+    "The in-game paytable (paytable-1.webp page 1/6, paytable-2.webp page 2/6) shows these per-symbol dollar payouts on a $2.00 total bet:\n\n| id | 2 | 3 | 4 | 5 |\n|---|---|---|---|---|\n| cleopatra | $0.50 | $5.00 | $7.50 | $10.00 |\n| ankh_ring / gold_scarab (identical pay) | $0.20 | $4.00 | $6.00 | $8.00 |\n| cleopatra_coin / eye_of_horus (identical pay) | — | $2.00 | $5.00 | $7.00 |\n| sym_a / sym_k | — | $0.50 | $3.00 | $6.00 |\n| sym_q / sym_j | — | $0.30 | $2.00 | $5.00 |\n| sym_10 / sym_9 | — | $0.30 | $1.00 | $4.00 |\n| scatter_lotus | — | $2.00 (1x) | $10.00 (5x) | $50.00 (25x) |\n\nAll of the above match the in-game paytable exactly (paytable-1.webp). `wild_pyramid` (the base WILD, reels 2/3/4) has NO standalone payout — paytable-1.webp shows only substitution text, no dollar figures. The $1.00/$10.00/$25.00/$50.00 row previously attributed to `wild_pyramid` actually belongs to the separate `wild_multiplier` symbol (paytable-2.webp: the free-spins-only x2 wild). `ram_coin`'s distinct icon/payout could not be confirmed against the paytable screenshots and remains estimated.",
+    "See the corrected paytable in [[math-and-rtp]] (sourced from paytable-1.webp/paytable-2.webp). `cleopatra`, `ankh_ring`, `gold_scarab`, `cleopatra_coin`, `eye_of_horus`, `sym_a`, `sym_k`, `sym_q`, `sym_j`, `sym_10`, `sym_9`, and `scatter_lotus` all match the in-game paytable exactly. The only real discrepancy: the `wild_pyramid` payout figures were misattributed — `wild_pyramid` has no standalone pay (substitution only, reels 2/3/4), and those dollar values actually belong to `wild_multiplier`. `ram_coin`'s icon mapping remains unconfirmed.",
+    "- Two+ wilds in one way multiply (×2×2 = ×4); across different ways they apply independently to each way.\n- The in-game rules state the WILD MULTIPLIER symbol always carries a fixed ×2 multiplier (\"the WILD MULTIPLIER symbol carries a multiplier of x2\", paytable-2.webp) — there is no higher standalone multiplier value; only the VAULT increment amount is randomized, not the wild's own multiplier.\n- Win cap: multiplied total still clamped to 12,500× bet — confirmed in-game (paytable-3.webp/paytable-6.webp)."
+  ]
+}

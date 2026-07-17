@@ -1,0 +1,16 @@
+{
+  "status": "written",
+  "reason": null,
+  "doc": "art-design.md",
+  "cassette_key": "luxor-of-cleopatra-v3:art:8639b1271fdddeb5",
+  "prompt_version": 1,
+  "model": "opus",
+  "tokens": {
+    "input": 13,
+    "output": 14683
+  },
+  "cost": 1.1271855,
+  "pipeline_path": "/Users/macos/apps/kerberos/slot-game/slot-sugar-rush/pipeline",
+  "showcases_path": "/Users/macos/apps/kerberos/slot-game/slot-showcases",
+  "screenshots": 25
+}

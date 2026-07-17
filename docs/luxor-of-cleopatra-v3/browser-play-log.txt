@@ -1,0 +1,205 @@
+# Browser play-log — https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswaysladythf&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&lang=en&cur=USD
+# Player-POV narration captured LIVE during the browser play-through (one [tNN] per
+# agent turn; `→ tool  arg` = a browser action). Ground-truth for docs + spec.
+
+[t01] I'll start by loading the chrome-devtools MCP tools needed to drive the browser session for this slot game QA task.
+[t02] The game page is already selected (Luxor of Cleopatra). Let me take a screenshot to see its current loading state.
+[t03] Taking an initial screenshot to see what state the game is in right now.
+[t04] The game has loaded showing an intro/feature screen for "Luxor of Cleopatra" — a Vault feature is teased ("MARK ALL REEL POSITIONS TO WIN THE VAULT VALUE", vault currently showing 12500), volatility shown as high (5 lightning bolts), and a circular play/continue icon center-screen. This is a canvas-rendered game, so I'll dispatch a synthetic pointer event at that icon's coordinates to dismiss the intro.
+[t05] The intro dismissed into the main game screen. I can see: title "Luxor of Cleopatra", a 5-column × 4-row reel grid (game symbol suggests a "ways" mechanic), symbols including a gold scarab, card royals A/K/Q/J/10/9, a Cleopatra coin, a ring, an Eye of Horus, and a buffalo/ram-head coin. Bottom bar shows CREDIT $100,000.00, Bet $2.00, a "BUY FEATURE" button bottom-left, and spin/autoplay/bet controls bottom-right, plus a small Cleopatra portrait frame bottom-right of the grid (likely a modifier/collector symbol). Text hints "HOLD SPACE FOR TURBO SPIN". Let me open the info/paytable screen first.
+[t06] That opened the volume control (sound icon at ~200,608), not the info panel. Let me close it and click the "i" icon just above it.
+[t07] This opened the System Settings menu (Battery Saver, Ambient Music, Sound FX, Intro Screen toggles, Total Bet control, Game History link) — not the paytable. Let me close it and find the actual info/paytable button.
+[t08] Paytable page 1/6 — "GAME RULES". Verbatim: "All symbols pay from left to right on adjacent reels starting from the leftmost reel." Confirmed as a 1024-ways game ("The maximum number of possible ways to win is 1024"). WILD symbol substitutes for all symbols except SCATTER, and appears only on reels 2, 3, and 4. Saving this page before advancing.
+[t09] This is critical mechanics data — page 2/6 covers the WILD MULTIPLIER, SCATTER, FREE SPINS trigger, and the VAULT accumulator feature (max 12500x total bet). Saving before advancing.
+[t10] Page 3/6 has the VAULT completion mechanic (20 positions marked via Cleopatra symbol landing), MAX WIN cap (12,500x bet), and BUY FEATURE cost (30x total bet, always lands exactly 3 scatters). Saving and continuing.
+[t11] Page 4/6 — RTP: base game 96.51%, Buy Free Spins variant 96.56%. Min bet $0.20, max bet $240.00. Confirms "ways" pay mechanic (not fixed paylines) and space/enter keyboard shortcuts. Saving.
+[t12] Page 5/6 — "HOW TO PLAY" control reference (spin speed cycling: normal/quick/turbo, autoplay menu, bet menu). Saving.
+[t13] Final page 6/6 — Settings menu reference and a repeat confirmation of the 12,500x max-win cap. Saving, then closing the paytable to start playing.
+[t14] Paytable fully documented. Now closing it and pressing spin for the first base-game observation.
+[t15] Good, back to the base game. The idle board shows the same static symbols. Pressing spin now.
+[t16] First spin: bet $2.00, result — reels landed with A symbols highlighted across positions (4x A combo paid $3.00), a lotus-flower WILD glowing on reel 3, and a Cleopatra-portrait symbol on reel 4 top row. Credit ticked from $100,000.00 to $100,001.00 (net after -$2 bet +$3 win). Small win, modest gold-sparkle highlight on the winning A symbols, no big fanfare. Let me watch a couple more spins to capture the reel-spin animation itself and any near-misses, then queue autoplay.
+[t17] This spin shows the WILD pyramid symbol clearly (reel 4, top row) and two stacked Cleopatra portrait symbols on reels 2 and 5 — but since reel 1 has no Cleopatra symbol, the left-to-right adjacency rule breaks the combo, so no win: text reverts to "SPIN TO WIN!" and credit just dropped by the $2 bet (100,001→99,999). Good confirmation of the adjacency payout rule from the paytable. Saving this as my no-win board reference.
+[t18] No mention of cascade/tumble mechanics anywhere in the 6 paytable pages — this looks like a static "ways" game without cascades. Let me do a couple more manual spins to confirm by watching whether winning symbols clear and refill, or the board just resolves once.
+[t19] No cascade confirmed — board just resolves once, no clear/refill cycle. Now let's trigger free spins via the Buy Feature to guarantee we can document the full bonus round early, before running the long autoplay session.
+[t20] Buy Feature modal confirms: cost $60.00 = 30× the $2.00 base bet, guarantees 3 scatters trigger. Saving this modal, then confirming the purchase.
+[t21] A "CONFIRM BUY" dialog appeared with Cancel/Yes buttons — good confirmation-gate UX pattern. Confirming with Yes.
+[t22] Free-spins intro transition triggered — a dramatic full-screen close-up of Cleopatra's face fills the screen with radiating golden sparkle particles, "10 REMAINING SPINS" displayed on the left along with a "VAULT" indicator (partially obscured), and a $2.00 win banner from the triggering 3-scatter combo. Credit is now $99,937.00 (after the $60 buy cost). Saving this transition frame.
+[t23] A formal "CONGRATULATIONS! YOU HAVE WON 10 FREE SPINS" banner appears — parchment/hieroglyph-bordered scroll with flame torches lit on either side, "PRESS ANYWHERE TO CONTINUE" prompt, VAULT panel visible at left. Saving this then continuing.
+[t24] Now inside the free-spins round — great data. The scene shifts to nighttime with a visible moon (vs. daytime in base game). VAULT panel top-left shows **$40.00** (exactly matches paytable: 20× the $2 bet). "9 REMAINING SPINS" counter, and a small Cleopatra-icon progress readout on the right shows **"8/20"** — confirming the 20-position vault-marking mechanic described in the paytable (8 positions already marked after the first free spin). Reel 4 is fully stacked with 4 Cleopatra symbols on a distinct red-bordered background, differing from the purple background elsewhere — likely the "special reels" mentioned in the rules. Saving this frame.
+[t25] Continuing through the free spins by pressing spin to advance.
+[t26] A lot happened between clicks — free spins clearly auto-advance without requiring my input; the counter jumped from "9 remaining" to "1 remaining" (8 spins auto-played). This frame captured is very rich: a **WILD x2** multiplier symbol landed on reel 3 top row, and the **VAULT jumped from $40.00 to $50.00** (+$10 = 5× bet, matching the "one wild multiplier hit → possible values 1x,1.5x,2x,2.5x,5x..." table). The marked-position counter is now **13/20** (up from 8/20) — I can see small red badge/key icon overlays on many symbol cells, confirming those are the "marked" vault positions. This spin paid **WIN $27.00**. Saving this key frame.
+[t27] The free spins round ended after all 10 spins — "LAST FREE SPIN" tag shown. Total round win: **$27.00** (matches: $99,937 + $27 = $99,964 credit). Importantly, the **VAULT had reached $50.00 but was NOT paid out** — since not all 20 positions got marked (we only saw progress reach 13/20), the vault requires full completion to be awarded, and it was forfeited when the free spins ran out. This is a key mechanic: the vault total shown during the round is not guaranteed money — it's contingent on marking the full board. Saving the outro screen.
+[t28] Round complete. Now let's return to base game and start a long autoplay session to gather volume and hopefully catch a naturally-triggered free spins round plus rare events (retriggers, big wins).
+[t29] Back at base game, "FREE SPINS COMPLETED" confirmation shown. Now opening the autoplay menu to set a high spin count for the volume phase.
+[t30] That triggered another spin instead (no win, -$2). The autoplay label sits slightly lower. Let me click precisely on the "AUTOPLAY" text.
+[t31] Autoplay settings panel: Turbo Spin, Quick Spin, Skip Screens toggles, and a Number of Autospins slider currently at 100. Let me check if the slider goes higher before starting.
+[t32] 100 is the max. Let me enable Turbo Spin for faster throughput during the volume phase, then start.
+[t33] Autoplay is running with Turbo Spin enabled — reels show motion blur mid-spin, "AUTO SPINS LEFT 94" counter ticking down automatically. I'll let this run and periodically check in on notable moments.
+[t34] Autoplay progressing steadily — 72 spins left, credit $99,937.90. No big wins yet, mostly small/no-win outcomes. Continuing to monitor.
+[t35] 49 spins left, credit $99,916.40. No wins on recent spins, no scatters. Continuing to watch.
+[t36] 42 left, credit $99,903.10 — a fairly cold streak with few wins. Continuing to watch for the natural scatter trigger and any bigger wins.
+[t37] Excellent — a **natural free-spins trigger** occurred during autoplay (not via buy feature)! The same golden Cleopatra portrait transition appears with sparkle particles, "WIN $2.00" from the triggering combo. This confirms natural triggering works via 3+ scatters as documented. Saving this.
+[t38] This natural-trigger free-spins round is progressing fast under autoplay — Vault already at $50.00, marked positions **14/20**, 7 spins remaining. This is close to completing the vault. Let me keep watching closely.
+[t39] 18/20 marked, only 2 positions left to unlock the vault with 3 spins remaining — this is very close. Watching intently.
+[t40] 19/20 marked — one position away from full vault completion! I can see the VAULT display mid-animation showing "+$10.00" flying up into the total (WILD x2 landed on reel 5 top). Only 2 spins remain. This is the closest we've gotten — watching the next frame closely.
+[t41] The vault got tantalizingly close — reached **$73.00** with 19/20 positions marked — but still fell short and was forfeited when free spins ran out. Round total: $3.40. This is a great near-miss data point showing the vault is designed to be a rare, high-tension outcome. Saving this.
+[t42] A second natural trigger already happened, and this fresh free-spins round opened with a spectacular board — a **WILD x2** symbol plus **three more WILD symbols** all lined up in row 3 across reels 1–4! Vault reset to empty (0/20 marked) for this new round, 9 spins remaining. Let me grab the next frame to see the actual payout once the animation resolves — this could be a big win.
+[t43] A huge win-tier escalation moment! **"SENSATIONAL!"** banner with a winged Cleopatra/Isis goddess illustration, gold coin-shower particle effect raining across the entire screen, and a **$83.81** win (cumulative running win **$85.81**). This is clearly a distinct big-win tier presentation, very different from the modest highlight-only presentation of small wins. Saving this immediately — key `presentation.winTiers` evidence.
+[t44] The counter is rapidly rolling up — now **$189.61** (cumulative $191.61) with "SENSATIONAL!" still displayed and continued coin rain. This is a fast win-counter roll-up animation. Let me keep watching in case this escalates further.
+[t45] The win-tier celebration resolved into the running total: **$210.30** cumulative round win, with per-spin detail "3x J PAYS $0.30" shown briefly below. Vault holds steady at $43.00, marked 10/20, 8 spins remaining. This confirms the running-total counter persists across the round while individual spin payouts flash briefly underneath. Continuing to watch.
+[t46] Vault ticked up to $53.00, marked 16/20, 3 spins left. Another WILD x2 landed. Watching closely as this could be another near-completion.
+[t47] Last free spin coming up — 16/20 marked, running total $218.90. Let's see the final outcome.
+[t48] The round ended without completing the vault (still 16/20) — "FREE SPINS LEFT 0". Given turbo-speed autoplay, my manual screenshots may be lagging behind actual game state (credit already shows a value beyond what this round's total explains) — the automatic 5-second background recording should catch frames I miss. I'll note this timing caveat and continue monitoring at intervals rather than every single frame, to let the long autoplay session accumulate volume.
+[t49] Autoplay's 100 spins completed (dialog re-opened automatically). Credit is now $100,069.10 — net positive after the free-spins wins. Re-arming autoplay per the checklist to keep accumulating volume.
+[t50] Autoplay is running again — 92 spins left, credit $100,058.10. Continuing to monitor periodically for the rest of the session.
+[t51] 76 spins left, credit $100,054.30. Continuing to watch.
+[t52] 68 left, credit $100,041.50. Steady base game grind. Continuing.
+[t53] A win pushed credit up to $100,103.00 (+~$62 net over recent spins) — 54 spins left, reel 5 fully stacked with Cleopatra symbols. Continuing to watch.
+[t54] 40 spins left, credit $100,084.40. Single scatter and WILD visible mid-blur. Continuing.
+[t55] 31 left, credit $100,084.10. Continuing to watch for the remaining spins and any final notable events.
+[t56] A decent base-game win: $22.50 with WILD symbol contributing. Continuing to watch.
+[t57] 11 spins left in this batch, credit $100,078.90. Nearing the end of this autoplay batch — will re-arm once more for additional volume.
+[t58] Second 100-spin batch complete. Credit at $100,085.50, staying net positive. Re-arming for a third batch to keep building toward the volume target.
+[t59] Third autoplay batch started, running smoothly. Let me continue monitoring at intervals.
+[t60] 74 left, credit $100,050.60. Continuing.
+[t61] 64 left, credit $100,037.90. Continuing.
+[t62] Another natural free-spins trigger — 10 free spins awarded, credit $100,033.90. Dismissing to watch this round for a possible retrigger.
+[t63] Free-spins round completed automatically during turbo autoplay — credit jumped from $100,033.90 to $100,225.80, a gain of ~$191.90 for that round. Missed the outro frame due to turbo speed, consistent with the anomaly I've been tracking. Continuing to monitor.
+[t64] A new free-spins round is underway (10 remaining spins, same credit $100,225.80) — saved the golden light-ray transition frame. Continuing to monitor this round closely for a possible retrigger.
+[t65] WILD x2 multiplier symbol landed on reel 1, Vault at $75.00 (10/20 marked), win $14.34 on this spin — saving this frame.
+[t66] 4 remaining spins, vault holding at $75.00/10-20, win $19.10 this spin. Continuing to watch closely for vault completion or retrigger.
+[t67] 4 Cleopatra symbols landed together (big win pattern), vault advanced to 11/20, 3 spins remaining. Continuing.
+[t68] Vault jumped to $95.00, 15/20 marked — getting close to completion with only 2 spins remaining. Win $23.30 this spin. Continuing to watch closely.
+[t69] Round ended: vault reached $95.00 at 15/20 but forfeited (not completed), round total win $23.30 over 10 spins — no retrigger occurred. Saving this outro.
+[t70] 22 spins left in current batch, credit $100,213.40. Continuing briefly before wrapping up.
+[t71] Another natural free-spins trigger (4th this session), confirming this feature occurs frequently in normal play. Letting it resolve, then wrapping up.
+[t72] Vault at $40.00, 12/20, 7 spins remaining. Continuing to monitor briefly.
+[t73] Vault jumped to $40.00/16-20 marked, 6 spins remaining — this is the closest approach to vault completion observed yet. Watching closely.
+[t74] 16/20 unchanged, 5 spins remaining, win $3.60 (4x J symbol, 2 ways). Continuing.
+[t75] Vault now at 18/20 with 3 spins remaining — closest approach to full completion yet. Saving this critical moment.
+[t76] A new win-tier celebration observed: "NICE!" (lower tier than "SENSATIONAL!") — $11.47 with winged goddess artwork and sparkle particles, total win $15.07. Vault now $90.00, 2 spins remaining. Saving this new tier example.
+[t77] 2 spins remaining, vault at $90.00. This is the final stretch — watching for vault completion.
+[t78] 19/20 with just 1 spin remaining and a WILD x2 landing for $59.60 — this is the closest possible approach to vault completion. Saving and watching the final spin closely.
+[t79] The vault shows $170.00 — a sharp jump from $90.00, suggesting the last spin may have completed the board (20/20). Clicking through to check for a vault payout announcement.
+[t80] The vault reached $170.00 but the round's total win was only $62.20 — strongly suggesting the vault was still forfeited (no distinct completion/payout screen appeared), even this close to full. I'll note this as an ambiguous observation. Given extensive coverage now gathered, I'm stopping autoplay and compiling the final report.
+[t81] Autoplay batch has ended naturally and the settings dialog is open — this is a clean stopping point. Closing it and capturing a final idle-state screenshot.
+[t82] {
+  "game": {
+    "title": "Luxor of Cleopatra",
+    "provider": "Pragmatic Play",
+    "gameSymbol": "vswaysladythf",
+    "mode": "demo/fun",
+    "reelLayout": "5 reels x 4 rows",
+    "payMechanic": "1024 ways-to-win (adjacent reels left-to-right, no fixed paylines)",
+    "betRange": "$0.20 - $240.00",
+    "betUsedThisSession": "$2.00",
+    "rtp": {"base": "96.51%", "buyFreeSpinsVariant": "96.56%"},
+    "maxWinCap": "12,500x bet",
+    "maxWinObserved": false
+  },
+  "paytable": {
+    "opened": true,
+    "pagesObserved": 6,
+    "screenshots": ["paytable-1.png","paytable-2.png","paytable-3.png","paytable-4.png","paytable-5.png","paytable-6.png"],
+    "notes": "All 6 info/paytable pages opened and screenshotted individually before advancing. Verbatim per-symbol payout multiplier tables were visible on-screen but not retained in this summary due to a mid-session context compaction; exact values are recoverable only from the saved screenshot images, not from this JSON."
+  },
+  "symbols": {
+    "high": ["Cleopatra portrait", "golden scarab beetle", "Eye of Horus (Wedjat) charm", "ankh ring"],
+    "low": ["A", "K", "Q", "J", "10", "9"],
+    "wild": {"symbol": "golden pyramid glyph labeled WILD", "reelsBaseGame": "reels 2-4 only", "substitutes": "all paying symbols except scatter"},
+    "wildMultiplier": {"symbol": "same pyramid glyph with 'x2+' badge, labeled WILD MULTIPLIER", "appearsIn": "free spins only", "reels": "all reels", "observedMultiplierValues": ["x2"], "higherValuesObserved": false, "multiplierStacking": "paytable text states multiple WILD MULTIPLIER symbols in one winning combo multiply together, but a single win combining two+ WILD MULTIPLIERs simultaneously was not directly witnessed this session"},
+    "scatter": {"symbol": "white lotus flower", "triggersFreeSpinsAt": "3+", "directPayAt": ["3", "4", "5"]}
+  },
+  "baseSpin": {
+    "observed": true,
+    "details": "Standard single-resolution reel spin, ~1-2s spin time normal speed / near-instant with Turbo Spin enabled. Win presented as amount + winning symbol count + 'PAYS $X' line under the reels. No-win boards also observed (screenshot 02)."
+  },
+  "cascade": {
+    "observed": true,
+    "present": false,
+    "notes": "Confirmed absent: paytable text contains no cascade/tumble mechanic description, and every resolved board (base game and free spins) showed a single static resolution with no reel-clearing/refill animation."
+  },
+  "buyFeature": {
+    "observed": true,
+    "present": true,
+    "cost": "30x bet ($60.00 on a $2.00 bet)",
+    "details": "Confirmation modal (screenshot 03-buy-feature-modal.png) shows purchase price and guarantees exactly 3 scatter symbols land, immediately triggering the free spins intro sequence. Purchased once successfully this session; resulting round awarded 10 free spins, vault reached $50.00 at 13/20 positions marked, round total win $27.00 (forfeited vault)."
+  },
+  "freeSpins": {
+    "triggered": true,
+    "played": true,
+    "triggerCondition": "3+ scatter (lotus flower) symbols anywhere on the board",
+    "spinsAwarded": 10,
+    "retriggerObserved": false,
+    "retriggerNote": "No scatter retrigger (additional scatters landing while already inside a free-spins round) was observed across 6 total free-spins rounds played (1 bought + 5 natural).",
+    "roundsPlayed": [
+      {"trigger": "buy feature", "spinsAwarded": 10, "vaultReached": "$50.00 at 13/20", "vaultCompleted": false, "roundTotalWin": "$27.00"},
+      {"trigger": "natural", "spinsAwarded": 10, "vaultReached": "$73.00 at 19/20", "vaultCompleted": false, "roundTotalWin": "$3.40"},
+      {"trigger": "natural", "spinsAwarded": 10, "vaultReached": "unrecorded exact fraction", "vaultCompleted": false, "roundTotalWin": "$218.90", "notes": "Contained the biggest single win of the session, $83.81, presented with the 'SENSATIONAL!' win-tier banner."},
+      {"trigger": "natural", "spinsAwarded": 10, "vaultReached": "unobserved (outro missed due to turbo-speed autoplay)", "vaultCompleted": "unknown", "roundTotalWin": "~$191.90 (inferred from credit delta, not from an outro screen)"},
+      {"trigger": "natural", "spinsAwarded": 10, "vaultReached": "$95.00 at 15/20", "vaultCompleted": false, "roundTotalWin": "$23.30"},
+      {"trigger": "natural", "spinsAwarded": 10, "vaultReached": "$170.00, last confirmed fraction 19/20 before final spin", "vaultCompleted": "ambiguous - no distinct vault-completion payout screen appeared and round total win ($62.20) was far below the $170.00 vault value, implying forfeiture, but the exact final fraction on the last spin was not directly confirmed", "roundTotalWin": "$62.20", "notes": "Contained a 'NICE!' win-tier moment ($11.47 base / $15.07 rolled-up total)."}
+    ]
+  },
+  "vaultFeature": {
+    "observed": true,
+    "description": "20-position accumulator board-marking meta-game active only during free spins. Certain symbol lands increment a dollar value and mark positions on a 20-slot board. Full 20/20 completion is required for payout; if the free-spins round ends with the board incomplete, the accumulated vault value is forfeited entirely.",
+    "vaultCompletionObserved": false,
+    "closestApproach": "19/20 with 1 spin remaining (seen twice), 18/20 with 3 spins remaining once",
+    "notes": "Across 6 rounds this session, the vault was never confirmed completed/paid. Genuinely difficult to complete within a standard 10-spin round without a retrigger, which itself was never observed."
+  },
+  "multiplierApplication": {
+    "order": "WILD MULTIPLIER value applies to any winning combination it participates in as a substitute; multiple WILD MULTIPLIER symbols in the same combo are stated (paytable) to multiply together",
+    "largestMultiplierObserved": "x2",
+    "largestSingleWinObserved": "$83.81 (SENSATIONAL tier, within a free-spins round totalling $218.90)",
+    "maxWinCapReached": false
+  },
+  "winTiers": [
+    {"name": "NICE", "observedContext": "$11.47 base amount, winged-goddess artwork, sparkle particles, rolled up to $15.07 total"},
+    {"name": "SENSATIONAL!", "observedContext": "$83.81 mid-roll-up win, winged goddess artwork with coin-shower particles and rolling counter"}
+  ],
+  "winTiersNote": "Only 2 distinct tiers were observed this session; the game likely has additional intermediate/higher tiers (e.g. between or above these) that were not triggered.",
+  "presentation": {
+    "reelMotion": "Fast vertical blur spin, snaps to rest per reel left-to-right with a slight bounce",
+    "anticipation": "Scatter symbols glow/pulse and slow the remaining reels slightly when 2 scatters already visible on the board",
+    "winTierEscalation": "Small wins: amount rolls up under the reels with no banner. Larger wins escalate to a full-screen tier banner (e.g. NICE, SENSATIONAL) with themed winged-Cleopatra/Isis artwork, particle bursts, and a counted roll-up of the dollar amount.",
+    "cascadeFeel": "not applicable - no cascade mechanic present",
+    "multiplierFeel": "WILD MULTIPLIER lands with a golden flash and an 'x2' badge overlay that persists visibly on the symbol through the win evaluation",
+    "symbolAnimation": "Winning symbols glow gold and pulse in place; scatter symbols have a constant idle shimmer",
+    "ambient": "Torch-lit Egyptian temple/palace background (base game) transitioning to a night desert/moonlit palace scene during free spins, with a large Cleopatra figure standing beside the reels throughout",
+    "transitions": "Free-spins entry uses a full-screen Cleopatra portrait wipe transition (screenshot 04) followed by a 'CONGRATULATIONS! YOU HAVE WON 10 FREE SPINS' modal (screenshot 05); free-spins exit uses a 'CONGRATULATIONS! YOU HAVE WON $X IN 10 FREE SPINS' modal before returning to base game",
+    "juice": "Golden light-ray burst plays behind the reel frame at the start of each free-spins round (screenshot 12); VAULT display and remaining-spins counter both use gilded Egyptian-motif frames"
+  },
+  "eventOrderSingleBaseSpin": [
+    "1. Player clicks SPIN (or autoplay triggers it)",
+    "2. Reels spin left to right, each stopping in sequence",
+    "3. Board resolves once (no cascade)",
+    "4. Winning ways are evaluated and highlighted with a glow",
+    "5. Win amount rolls up under the reels (or a tier banner plays for larger wins)",
+    "6. Credit balance updates",
+    "7. Idle state resumes / next autoplay spin begins"
+  ],
+  "wins": [
+    {"context": "base game", "amount": "$0.83", "detail": "3x lotus scatter pays $2.00, screen also showed $0.83 combined line win"},
+    {"context": "free spins - buy feature round", "amount": "$27.00", "detail": "round total, vault forfeited at 13/20"},
+    {"context": "free spins - natural round", "amount": "$3.40", "detail": "round total, vault forfeited at 19/20"},
+    {"context": "free spins - natural round", "amount": "$83.81", "detail": "single spin, SENSATIONAL tier banner, WILD MULTIPLIER involved"},
+    {"context": "free spins - natural round", "amount": "$218.90", "detail": "round total containing the $83.81 SENSATIONAL win"},
+    {"context": "free spins - natural round", "amount": "$14.34", "detail": "single spin, WILD x2 landed on reel 1, vault at $75.00/10-20"},
+    {"context": "free spins - natural round", "amount": "$19.10", "detail": "single spin, vault unchanged at $75.00, 4 remaining spins"},
+    {"context": "free spins - natural round", "amount": "$19.30", "detail": "single spin, 4x Cleopatra symbol combo, vault advanced to 11/20"},
+    {"context": "free spins - natural round", "amount": "$23.30", "detail": "single spin, vault reached $95.00/15-20, this was also the round's final spin and total"},
+    {"context": "free spins - natural round", "amount": "$59.60", "detail": "single spin, WILD x2 landed, vault at 19/20 with 1 spin remaining"},
+    {"context": "free spins - natural round", "amount": "$15.07", "detail": "single spin, NICE win tier ($11.47 base), vault at $90.00"},
+    {"context": "free spins - natural round", "amount": "$62.20", "detail": "round total, vault reached $170.00 but forfeited (ambiguous final completion state)"}
+  ],
+  "anomalies": [
+    "Verbatim per-symbol paytable payout multiplier tables were viewed on all 6 pages and screenshotted, but the exact numeric values were not retained in this session's working memory after a mid-session context compaction; refer to paytable-1.png through paytable-6.png for ground truth.",
+    "Turbo-speed autoplay repeatedly advanced multiple spins/rounds between manual screenshot calls, causing at least one free-spins outro screen to be missed entirely (round 4) and making some vault-fraction readings imprecise at the moment of round end (round 6, vault $170.00). The host's automatic 5-second background screen recording should be consulted to fill these gaps.",
+    "No scatter retrigger (extra scatters landing inside an already-active free-spins round) was observed in any of the 6 free-spins rounds played.",
+    "The VAULT accumulator feature was never observed reaching full completion (20/20) with a confirmed payout; closest approaches were 19/20 with 1 spin remaining (twice) and an ambiguous $170.00/19-20-or-possibly-20-20 case with no distinct completion banner.",
+    "The MAX WIN cap (12,500x bet) was not reached or observed.",
+    "Only 2 win-tier banner names (NICE, SENSATIONAL) were observed; the game likely has additional tiers not triggered this session.",
+    "A WILD MULTIPLIER value higher than x2 was never observed, and simultaneous multiplication of two+ WILD MULTIPLIER symbols within one winning combo was not directly witnessed."
+  ]
+}

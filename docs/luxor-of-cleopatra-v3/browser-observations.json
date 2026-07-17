@@ -1,0 +1,279 @@
+{
+  "url": "https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswaysladythf&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&lang=en&cur=USD",
+  "observations": {
+    "game": {
+      "title": "Luxor of Cleopatra",
+      "provider": "Pragmatic Play",
+      "gameSymbol": "vswaysladythf",
+      "mode": "demo/fun",
+      "reelLayout": "5 reels x 4 rows",
+      "payMechanic": "1024 ways-to-win (adjacent reels left-to-right, no fixed paylines)",
+      "betRange": "$0.20 - $240.00",
+      "betUsedThisSession": "$2.00",
+      "rtp": {
+        "base": "96.51%",
+        "buyFreeSpinsVariant": "96.56%"
+      },
+      "maxWinCap": "12,500x bet",
+      "maxWinObserved": false
+    },
+    "paytable": {
+      "opened": true,
+      "pagesObserved": 6,
+      "screenshots": [
+        "paytable-1.png",
+        "paytable-2.png",
+        "paytable-3.png",
+        "paytable-4.png",
+        "paytable-5.png",
+        "paytable-6.png"
+      ],
+      "notes": "All 6 info/paytable pages opened and screenshotted individually before advancing. Verbatim per-symbol payout multiplier tables were visible on-screen but not retained in this summary due to a mid-session context compaction; exact values are recoverable only from the saved screenshot images, not from this JSON."
+    },
+    "symbols": {
+      "high": [
+        "Cleopatra portrait",
+        "golden scarab beetle",
+        "Eye of Horus (Wedjat) charm",
+        "ankh ring"
+      ],
+      "low": [
+        "A",
+        "K",
+        "Q",
+        "J",
+        "10",
+        "9"
+      ],
+      "wild": {
+        "symbol": "golden pyramid glyph labeled WILD",
+        "reelsBaseGame": "reels 2-4 only",
+        "substitutes": "all paying symbols except scatter"
+      },
+      "wildMultiplier": {
+        "symbol": "same pyramid glyph with 'x2+' badge, labeled WILD MULTIPLIER",
+        "appearsIn": "free spins only",
+        "reels": "all reels",
+        "observedMultiplierValues": [
+          "x2"
+        ],
+        "higherValuesObserved": false,
+        "multiplierStacking": "paytable text states multiple WILD MULTIPLIER symbols in one winning combo multiply together, but a single win combining two+ WILD MULTIPLIERs simultaneously was not directly witnessed this session"
+      },
+      "scatter": {
+        "symbol": "white lotus flower",
+        "triggersFreeSpinsAt": "3+",
+        "directPayAt": [
+          "3",
+          "4",
+          "5"
+        ]
+      }
+    },
+    "baseSpin": {
+      "observed": true,
+      "details": "Standard single-resolution reel spin, ~1-2s spin time normal speed / near-instant with Turbo Spin enabled. Win presented as amount + winning symbol count + 'PAYS $X' line under the reels. No-win boards also observed (screenshot 02)."
+    },
+    "cascade": {
+      "observed": true,
+      "present": false,
+      "notes": "Confirmed absent: paytable text contains no cascade/tumble mechanic description, and every resolved board (base game and free spins) showed a single static resolution with no reel-clearing/refill animation."
+    },
+    "buyFeature": {
+      "observed": true,
+      "present": true,
+      "cost": "30x bet ($60.00 on a $2.00 bet)",
+      "details": "Confirmation modal (screenshot 03-buy-feature-modal.png) shows purchase price and guarantees exactly 3 scatter symbols land, immediately triggering the free spins intro sequence. Purchased once successfully this session; resulting round awarded 10 free spins, vault reached $50.00 at 13/20 positions marked, round total win $27.00 (forfeited vault)."
+    },
+    "freeSpins": {
+      "triggered": true,
+      "played": true,
+      "triggerCondition": "3+ scatter (lotus flower) symbols anywhere on the board",
+      "spinsAwarded": 10,
+      "retriggerObserved": false,
+      "retriggerNote": "No scatter retrigger (additional scatters landing while already inside a free-spins round) was observed across 6 total free-spins rounds played (1 bought + 5 natural).",
+      "roundsPlayed": [
+        {
+          "trigger": "buy feature",
+          "spinsAwarded": 10,
+          "vaultReached": "$50.00 at 13/20",
+          "vaultCompleted": false,
+          "roundTotalWin": "$27.00"
+        },
+        {
+          "trigger": "natural",
+          "spinsAwarded": 10,
+          "vaultReached": "$73.00 at 19/20",
+          "vaultCompleted": false,
+          "roundTotalWin": "$3.40"
+        },
+        {
+          "trigger": "natural",
+          "spinsAwarded": 10,
+          "vaultReached": "unrecorded exact fraction",
+          "vaultCompleted": false,
+          "roundTotalWin": "$218.90",
+          "notes": "Contained the biggest single win of the session, $83.81, presented with the 'SENSATIONAL!' win-tier banner."
+        },
+        {
+          "trigger": "natural",
+          "spinsAwarded": 10,
+          "vaultReached": "unobserved (outro missed due to turbo-speed autoplay)",
+          "vaultCompleted": "unknown",
+          "roundTotalWin": "~$191.90 (inferred from credit delta, not from an outro screen)"
+        },
+        {
+          "trigger": "natural",
+          "spinsAwarded": 10,
+          "vaultReached": "$95.00 at 15/20",
+          "vaultCompleted": false,
+          "roundTotalWin": "$23.30"
+        },
+        {
+          "trigger": "natural",
+          "spinsAwarded": 10,
+          "vaultReached": "$170.00, last confirmed fraction 19/20 before final spin",
+          "vaultCompleted": "ambiguous - no distinct vault-completion payout screen appeared and round total win ($62.20) was far below the $170.00 vault value, implying forfeiture, but the exact final fraction on the last spin was not directly confirmed",
+          "roundTotalWin": "$62.20",
+          "notes": "Contained a 'NICE!' win-tier moment ($11.47 base / $15.07 rolled-up total)."
+        }
+      ]
+    },
+    "vaultFeature": {
+      "observed": true,
+      "description": "20-position accumulator board-marking meta-game active only during free spins. Certain symbol lands increment a dollar value and mark positions on a 20-slot board. Full 20/20 completion is required for payout; if the free-spins round ends with the board incomplete, the accumulated vault value is forfeited entirely.",
+      "vaultCompletionObserved": false,
+      "closestApproach": "19/20 with 1 spin remaining (seen twice), 18/20 with 3 spins remaining once",
+      "notes": "Across 6 rounds this session, the vault was never confirmed completed/paid. Genuinely difficult to complete within a standard 10-spin round without a retrigger, which itself was never observed."
+    },
+    "multiplierApplication": {
+      "order": "WILD MULTIPLIER value applies to any winning combination it participates in as a substitute; multiple WILD MULTIPLIER symbols in the same combo are stated (paytable) to multiply together",
+      "largestMultiplierObserved": "x2",
+      "largestSingleWinObserved": "$83.81 (SENSATIONAL tier, within a free-spins round totalling $218.90)",
+      "maxWinCapReached": false
+    },
+    "winTiers": [
+      {
+        "name": "NICE",
+        "observedContext": "$11.47 base amount, winged-goddess artwork, sparkle particles, rolled up to $15.07 total"
+      },
+      {
+        "name": "SENSATIONAL!",
+        "observedContext": "$83.81 mid-roll-up win, winged goddess artwork with coin-shower particles and rolling counter"
+      }
+    ],
+    "winTiersNote": "Only 2 distinct tiers were observed this session; the game likely has additional intermediate/higher tiers (e.g. between or above these) that were not triggered.",
+    "presentation": {
+      "reelMotion": "Fast vertical blur spin, snaps to rest per reel left-to-right with a slight bounce",
+      "anticipation": "Scatter symbols glow/pulse and slow the remaining reels slightly when 2 scatters already visible on the board",
+      "winTierEscalation": "Small wins: amount rolls up under the reels with no banner. Larger wins escalate to a full-screen tier banner (e.g. NICE, SENSATIONAL) with themed winged-Cleopatra/Isis artwork, particle bursts, and a counted roll-up of the dollar amount.",
+      "cascadeFeel": "not applicable - no cascade mechanic present",
+      "multiplierFeel": "WILD MULTIPLIER lands with a golden flash and an 'x2' badge overlay that persists visibly on the symbol through the win evaluation",
+      "symbolAnimation": "Winning symbols glow gold and pulse in place; scatter symbols have a constant idle shimmer",
+      "ambient": "Torch-lit Egyptian temple/palace background (base game) transitioning to a night desert/moonlit palace scene during free spins, with a large Cleopatra figure standing beside the reels throughout",
+      "transitions": "Free-spins entry uses a full-screen Cleopatra portrait wipe transition (screenshot 04) followed by a 'CONGRATULATIONS! YOU HAVE WON 10 FREE SPINS' modal (screenshot 05); free-spins exit uses a 'CONGRATULATIONS! YOU HAVE WON $X IN 10 FREE SPINS' modal before returning to base game",
+      "juice": "Golden light-ray burst plays behind the reel frame at the start of each free-spins round (screenshot 12); VAULT display and remaining-spins counter both use gilded Egyptian-motif frames"
+    },
+    "eventOrderSingleBaseSpin": [
+      "1. Player clicks SPIN (or autoplay triggers it)",
+      "2. Reels spin left to right, each stopping in sequence",
+      "3. Board resolves once (no cascade)",
+      "4. Winning ways are evaluated and highlighted with a glow",
+      "5. Win amount rolls up under the reels (or a tier banner plays for larger wins)",
+      "6. Credit balance updates",
+      "7. Idle state resumes / next autoplay spin begins"
+    ],
+    "wins": [
+      {
+        "context": "base game",
+        "amount": "$0.83",
+        "detail": "3x lotus scatter pays $2.00, screen also showed $0.83 combined line win"
+      },
+      {
+        "context": "free spins - buy feature round",
+        "amount": "$27.00",
+        "detail": "round total, vault forfeited at 13/20"
+      },
+      {
+        "context": "free spins - natural round",
+        "amount": "$3.40",
+        "detail": "round total, vault forfeited at 19/20"
+      },
+      {
+        "context": "free spins - natural round",
+        "amount": "$83.81",
+        "detail": "single spin, SENSATIONAL tier banner, WILD MULTIPLIER involved"
+      },
+      {
+        "context": "free spins - natural round",
+        "amount": "$218.90",
+        "detail": "round total containing the $83.81 SENSATIONAL win"
+      },
+      {
+        "context": "free spins - natural round",
+        "amount": "$14.34",
+        "detail": "single spin, WILD x2 landed on reel 1, vault at $75.00/10-20"
+      },
+      {
+        "context": "free spins - natural round",
+        "amount": "$19.10",
+        "detail": "single spin, vault unchanged at $75.00, 4 remaining spins"
+      },
+      {
+        "context": "free spins - natural round",
+        "amount": "$19.30",
+        "detail": "single spin, 4x Cleopatra symbol combo, vault advanced to 11/20"
+      },
+      {
+        "context": "free spins - natural round",
+        "amount": "$23.30",
+        "detail": "single spin, vault reached $95.00/15-20, this was also the round's final spin and total"
+      },
+      {
+        "context": "free spins - natural round",
+        "amount": "$59.60",
+        "detail": "single spin, WILD x2 landed, vault at 19/20 with 1 spin remaining"
+      },
+      {
+        "context": "free spins - natural round",
+        "amount": "$15.07",
+        "detail": "single spin, NICE win tier ($11.47 base), vault at $90.00"
+      },
+      {
+        "context": "free spins - natural round",
+        "amount": "$62.20",
+        "detail": "round total, vault reached $170.00 but forfeited (ambiguous final completion state)"
+      }
+    ],
+    "anomalies": [
+      "Verbatim per-symbol paytable payout multiplier tables were viewed on all 6 pages and screenshotted, but the exact numeric values were not retained in this session's working memory after a mid-session context compaction; refer to paytable-1.png through paytable-6.png for ground truth.",
+      "Turbo-speed autoplay repeatedly advanced multiple spins/rounds between manual screenshot calls, causing at least one free-spins outro screen to be missed entirely (round 4) and making some vault-fraction readings imprecise at the moment of round end (round 6, vault $170.00). The host's automatic 5-second background screen recording should be consulted to fill these gaps.",
+      "No scatter retrigger (extra scatters landing inside an already-active free-spins round) was observed in any of the 6 free-spins rounds played.",
+      "The VAULT accumulator feature was never observed reaching full completion (20/20) with a confirmed payout; closest approaches were 19/20 with 1 spin remaining (twice) and an ambiguous $170.00/19-20-or-possibly-20-20 case with no distinct completion banner.",
+      "The MAX WIN cap (12,500x bet) was not reached or observed.",
+      "Only 2 win-tier banner names (NICE, SENSATIONAL) were observed; the game likely has additional tiers not triggered this session.",
+      "A WILD MULTIPLIER value higher than x2 was never observed, and simultaneous multiplication of two+ WILD MULTIPLIER symbols within one winning combo was not directly witnessed."
+    ]
+  },
+  "coverage": {
+    "required": [
+      "base_spin",
+      "cascade",
+      "win",
+      "free_spins",
+      "buy_feature",
+      "paytable"
+    ],
+    "observed": [
+      "base_spin",
+      "cascade",
+      "win",
+      "free_spins",
+      "buy_feature",
+      "paytable"
+    ],
+    "missing": [],
+    "confirmed_absent": [],
+    "complete": true
+  }
+}

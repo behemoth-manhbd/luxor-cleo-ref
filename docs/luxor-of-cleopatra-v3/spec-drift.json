@@ -1,0 +1,55 @@
+{
+  "patched": false,
+  "removed_features": [],
+  "scalar_flags": [
+    {
+      "section": "event-order-and-determinism.md#RNG Contract"
+    },
+    {
+      "section": "math-and-rtp.md#Full paytable"
+    },
+    {
+      "section": "presentation-and-feel.md#Multiplier Effects"
+    },
+    {
+      "section": "presentation-and-feel.md#Juice Moments"
+    },
+    {
+      "section": "product-spec.md#Symbol Table"
+    },
+    {
+      "section": "vault-mechanics.md#Trigger"
+    },
+    {
+      "section": "vault-mechanics.md#Parameters"
+    },
+    {
+      "section": "vault-mechanics.md#Algorithm"
+    },
+    {
+      "section": "vault-mechanics.md#Interactions"
+    },
+    {
+      "section": "vault-mechanics.md#QA checklist"
+    },
+    {
+      "section": "wild_multiplier-mechanics.md#Parameters"
+    },
+    {
+      "section": "wild_multiplier-mechanics.md#Algorithm"
+    },
+    {
+      "section": "wild_multiplier-mechanics.md#Interactions"
+    },
+    {
+      "section": "math-and-rtp.md#Full paytable"
+    },
+    {
+      "section": "product-spec.md#Symbol Table"
+    },
+    {
+      "section": "wild_multiplier-mechanics.md#Edge cases"
+    }
+  ],
+  "reason": "nothing_to_patch"
+}

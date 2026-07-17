@@ -1,0 +1,49 @@
+{
+  "coverage": 0.921667,
+  "per_check": {
+    "files": 1.0,
+    "features": 1.0,
+    "symbols": 1.0,
+    "grid": 1.0,
+    "math": 1.0,
+    "references": 0.416667,
+    "detail": 1.0,
+    "truthfulness": 1.0,
+    "determinism": 1.0,
+    "vectors": 0.8
+  },
+  "gaps": [
+    {
+      "kind": "reference",
+      "item": "https://assets.lotoquebec.com/ressources/assets/v3/assets/blt8296e79a7001648c/blt4dcc1a49847802b3/65143e462f930ae373d2c1c3/cleopatra_rules_en.pdf"
+    },
+    {
+      "kind": "reference",
+      "item": "https://caesarspalaceonline.com/games/luxor-of-cleopatra_bltae568ef77cd082fb/"
+    },
+    {
+      "kind": "reference",
+      "item": "https://chipy.com/games/stakelogic/book-of-cleopatra"
+    },
+    {
+      "kind": "reference",
+      "item": "https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswaysladythf&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&lang=en&cur=USD"
+    },
+    {
+      "kind": "reference",
+      "item": "https://www.casinos.com/slots/luxor-of-cleopatra"
+    },
+    {
+      "kind": "reference",
+      "item": "https://www.gamblingnews.com/news/join-the-queen-of-egypt-on-a-leisurely-stroll-in-pragmatic-plays-luxor-of-cleopatra/"
+    },
+    {
+      "kind": "reference",
+      "item": "https://www.mcluck.com/games/slots/immortal-ways-cleopatra"
+    },
+    {
+      "kind": "vectors",
+      "item": "estimated-hygiene"
+    }
+  ]
+}

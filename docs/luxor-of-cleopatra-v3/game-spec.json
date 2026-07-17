@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "gameId": "luxor-of-cleopatra-v3",
+    "name": "Luxor of Cleopatra",
+    "provider": "Pragmatic Play",
+    "theme": "Ancient Egypt / Cleopatra",
+    "schemaVersion": "1.0.0",
+    "source": "text",
+    "capturedDate": "2026-07-16T00:00:00Z"
+  },
+  "grid": {
+    "type": "ways",
+    "rows": 4,
+    "cols": 5
+  },
+  "symbols": [
+    {
+      "id": "cleopatra",
+      "type": "regular",
+      "tier": "high",
+      "pay": [
+        0.25,
+        2.5,
+        3.75,
+        5
+      ],
+      "note": "Top-paying regular; also marks/collects VAULT key positions during free spins."
+    },
+    {
+      "id": "ankh_ring",
+      "type": "regular",
+      "tier": "high",
+      "pay": [
+        0.5,
+        2,
+        4
+      ]
+    },
+    {
+      "id": "gold_scarab",
+      "type": "regular",
+      "tier": "high",
+      "pay": [
+        0.5,
+        2,
+        4
+      ]
+    },
+    {
+      "id": "cleopatra_coin",
+      "type": "regular",
+      "tier": "high",
+      "pay": [
+        1,
+        2,
+        3.5
+      ]
+    },
+    {
+      "id": "eye_of_horus",
+      "type": "regular",
+      "tier": "high",
+      "pay": [
+        1,
+        2,
+        3.5
+      ]
+    },
+    {
+      "id": "ram_coin",
+      "type": "regular",
+      "tier": "high",
+      "pay": [
+        0.75,
+        2,
+        3.75
+      ]
+    },
+    {
+      "id": "sym_a",
+      "type": "regular",
+      "tier": "low",
+      "pay": [
+        0.25,
+        1.5,
+        3
+      ]
+    },
+    {
+      "id": "sym_k",
+      "type": "regular",
+      "tier": "low",
+      "pay": [
+        0.25,
+        1.5,
+        3
+      ]
+    },
+    {
+      "id": "sym_q",
+      "type": "regular",
+      "tier": "low",
+      "pay": [
+        0.2,
+        1,
+        2.5
+      ]
+    },
+    {
+      "id": "sym_j",
+      "type": "regular",
+      "tier": "low",
+      "pay": [
+        0.2,
+        1,
+        2.5
+      ]
+    },
+    {
+      "id": "sym_10",
+      "type": "regular",
+      "tier": "low",
+      "pay": [
+        0.15,
+        0.8,
+        2
+      ]
+    },
+    {
+      "id": "sym_9",
+      "type": "regular",
+      "tier": "low",
+      "pay": [
+        0.15,
+        0.8,
+        2
+      ]
+    },
+    {
+      "id": "wild_pyramid",
+      "type": "wild",
+      "tier": "high",
+      "pay": [],
+      "note": "Substitutes for all except scatter; appears only on reels 2, 3, 4."
+    },
+    {
+      "id": "wild_multiplier",
+      "type": "wild",
+      "tier": "high",
+      "pay": [],
+      "note": "Free-spins-only gold-coin wild carrying a fixed x2 multiplier; multiple in one way stack multiplicatively (x2, x4, x8...). Also feeds the VAULT meter."
+    },
+    {
+      "id": "scatter_lotus",
+      "type": "scatter",
+      "tier": "high",
+      "pay": [
+        1,
+        5,
+        25
+      ],
+      "note": "Lotus flower; 3/4/5 anywhere triggers free spins and pays 1x/5x/25x. In free spins adds 10x/50x/250x to the VAULT instead of retriggering."
+    }
+  ],
+  "math": {
+    "paylineSystem": "ways",
+    "count": 1024,
+    "paytable": {
+      "cleopatra": {
+        "2": 0.25,
+        "3": 2.5,
+        "4": 3.75,
+        "5": 5
+      },
+      "ankh_ring": {
+        "3": 0.5,
+        "4": 2,
+        "5": 4
+      },
+      "gold_scarab": {
+        "3": 0.5,
+        "4": 2,
+        "5": 4
+      },
+      "cleopatra_coin": {
+        "3": 1,
+        "4": 2,
+        "5": 3.5
+      },
+      "eye_of_horus": {
+        "3": 1,
+        "4": 2,
+        "5": 3.5
+      },
+      "ram_coin": {
+        "3": 0.75,
+        "4": 2,
+        "5": 3.75
+      },
+      "sym_a": {
+        "3": 0.25,
+        "4": 1.5,
+        "5": 3
+      },
+      "sym_k": {
+        "3": 0.25,
+        "4": 1.5,
+        "5": 3
+      },
+      "sym_q": {
+        "3": 0.2,
+        "4": 1,
+        "5": 2.5
+      },
+      "sym_j": {
+        "3": 0.2,
+        "4": 1,
+        "5": 2.5
+      },
+      "sym_10": {
+        "3": 0.15,
+        "4": 0.8,
+        "5": 2
+      },
+      "sym_9": {
+        "3": 0.15,
+        "4": 0.8,
+        "5": 2
+      },
+      "wild_pyramid": {
+        "5": 25
+      },
+      "scatter_lotus": {
+        "3": 1,
+        "4": 5,
+        "5": 25
+      }
+    },
+    "baseRTP": 0.9651,
+    "hitFrequency": 0.32,
+    "maxWinX": 12500,
+    "volatility": "high",
+    "betRange": {
+      "min": 0.2,
+      "max": 240
+    },
+    "buyFeatureRTP": 0.9656
+  },
+  "features": [
+    {
+      "id": "free_spins",
+      "trigger": "3+ lotus scatter symbols anywhere in a single base-game spin",
+      "count": 10,
+      "retrigger": false,
+      "behavior": "Awards 10 free spins played at the triggering bet. Extra scatters during the round do NOT retrigger; they add to the VAULT meter. Introduces x2 wild-multiplier symbols and activates the VAULT accumulator. No retrigger was observed across 6 free-spins rounds played."
+    },
+    {
+      "id": "vault",
+      "trigger": "Active during free spins; starts at 20x bet",
+      "retrigger": false,
+      "behavior": "Accumulator meter starting at 20x total bet (e.g. $40 on $2). Grows via wild-multiplier increments (observed +10x per x2 wild hit) and scatter increments (3/4/5 scatters add 10x/50x/250x). Cleopatra symbols mark grid positions (8 pre-marked, up to 20). The VAULT is paid ONLY if all 20 positions are marked before the 10 spins end; otherwise it is forfeited. Capped at 12,500x total bet. Full completion never observed (closest 19/20)."
+    },
+    {
+      "id": "buy_feature",
+      "trigger": "Purchase for 30x total bet (e.g. $60 on $2)",
+      "behavior": "Instantly enters free spins by always landing exactly 3 scatters (awards the 1x scatter win). Effective RTP ~96.56%. Includes a CONFIRM BUY dialog gate."
+    },
+    {
+      "id": "wild_multiplier",
+      "trigger": "Landed during free spins",
+      "behavior": "Gold-coin wild with a fixed x2 multiplier applied to any winning way it joins; multiple in one way stack multiplicatively (x2, x4, x8...). Also contributes increments to the VAULT. Only x2 was directly observed this session."
+    }
+  ],
+  "presentation": {
+    "winTiers": [
+      {
+        "id": "nice",
+        "label": "NICE!",
+        "note": "Lower observed big-win tier; winged-goddess artwork + sparkle particles (e.g. $11.47 on $2 bet)."
+      },
+      {
+        "id": "sensational",
+        "label": "SENSATIONAL!",
+        "note": "Higher observed big-win tier; winged Cleopatra/Isis artwork + full-screen gold coin-shower and fast counter roll-up (observed cumulative ~$210 on $2 bet)."
+      }
+    ],
+    "anticipation": {
+      "note": "Additional win tiers likely exist but were not triggered this session (only NICE and SENSATIONAL observed). Base game transitions from daytime to nighttime (visible moon) during free spins."
+    }
+  },
+  "provenance": {
+    "captureConfidence": 0.8,
+    "fieldConfidence": {
+      "meta.provider": 0.95,
+      "meta.theme": 0.98,
+      "grid.type": 0.9,
+      "grid.rows": 0.9,
+      "grid.cols": 0.9,
+      "math.count": 0.95,
+      "math.baseRTP": 0.5,
+      "math.maxWinX": 0.9,
+      "math.volatility": 0.9,
+      "math.hitFrequency": 0.15,
+      "symbols": 0.9,
+      "math.paytable": 0.4,
+      "features": 0.85
+    },
+    "derivability": {
+      "grid.type": "derivable",
+      "grid.rows": "derivable",
+      "grid.cols": "derivable",
+      "math.count": "derivable",
+      "math.baseRTP": "estimated",
+      "math.maxWinX": "estimated",
+      "math.volatility": "estimated",
+      "math.hitFrequency": "estimated",
+      "math.paytable": "estimated",
+      "symbols": "estimated"
+    },
+    "estimationMethod": {
+      "math.baseRTP": "Read directly from the live game's in-game paytable page 4 (base 96.51%, buy 96.56%) and corroborated by multiple market-research sources; per researcher rules RTP is never claimed as certain, so marked estimated with high confidence.",
+      "math.maxWinX": "12,500x cap read from in-game paytable pages 3/6 and market research; treated as a variant cap so marked estimated despite strong support.",
+      "math.volatility": "Conflicting evidence: in-game intro showed a 5-of-5 lightning-bolt (high) rating during play, while Pragmatic's official label and most reviews say 'medium' (one review says 'high'). Chose 'high' to match the game's own displayed rating; low confidence due to the conflict.",
+      "math.hitFrequency": "No published or observed hit-frequency figure; value is a rough placeholder inferred from the 1,024-ways high-hit-rate design and not derivable from evidence.",
+      "math.paytable": "Exact per-symbol payout multipliers were viewed in-game (paytable-1..6.png) but NOT retained after a mid-session context compaction; values shown are market-research estimates (5-of-a-kind top regular wins ~3.5x-5x) and are approximate.",
+      "symbols": "Roster (card royals 9-A, Cleopatra, scarab, ring/ankh, Cleopatra coin, Eye of Horus/Ra, ram/buffalo coin, pyramid wild, lotus scatter, gold-coin multiplier wild) observed live; individual pay values estimated from market research, not exact."
+    },
+    "fieldSupport": {
+      "math.baseRTP": [
+        "https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswaysladythf&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&lang=en&cur=USD",
+        "https://www.bigwinboard.com/luxor-of-cleopatra-pragmatic-play-slot-review/",
+        "https://slotcatalog.com/en/slots/luxor-of-cleopatra",
+        "https://www.casinos.com/slots/luxor-of-cleopatra",
+        "https://www.pragmaticplay.com/en/games/luxor-of-cleopatra/",
+        "https://www.igamingtoday.com/luxor-of-cleopatra-slot-review/"
+      ],
+      "math.maxWinX": [
+        "https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswaysladythf&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&lang=en&cur=USD",
+        "https://www.bigwinboard.com/luxor-of-cleopatra-pragmatic-play-slot-review/",
+        "https://slotcatalog.com/en/slots/luxor-of-cleopatra",
+        "https://www.casinos.com/slots/luxor-of-cleopatra",
+        "https://www.igamingtoday.com/luxor-of-cleopatra-slot-review/",
+        "https://www.gamblingnews.com/news/join-the-queen-of-egypt-on-a-leisurely-stroll-in-pragmatic-plays-luxor-of-cleopatra/"
+      ],
+      "math.volatility": [
+        "https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswaysladythf&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&lang=en&cur=USD",
+        "https://www.igamingtoday.com/luxor-of-cleopatra-slot-review/"
+      ],
+      "math.hitFrequency": [],
+      "grid.type": [
+        "https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswaysladythf&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&lang=en&cur=USD",
+        "https://www.bigwinboard.com/luxor-of-cleopatra-pragmatic-play-slot-review/",
+        "https://slotcatalog.com/en/slots/luxor-of-cleopatra"
+      ],
+      "grid.rows": [
+        "https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswaysladythf&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&lang=en&cur=USD",
+        "https://www.bigwinboard.com/luxor-of-cleopatra-pragmatic-play-slot-review/"
+      ],
+      "grid.cols": [
+        "https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswaysladythf&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&lang=en&cur=USD",
+        "https://www.bigwinboard.com/luxor-of-cleopatra-pragmatic-play-slot-review/"
+      ],
+      "symbols": [
+        "https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswaysladythf&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&lang=en&cur=USD",
+        "https://www.bigwinboard.com/luxor-of-cleopatra-pragmatic-play-slot-review/",
+        "https://slotcatalog.com/en/slots/luxor-of-cleopatra"
+      ]
+    },
+    "sources": [
+      "game-brief.md",
+      "https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswaysladythf&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&lang=en&cur=USD",
+      "https://www.bigwinboard.com/luxor-of-cleopatra-pragmatic-play-slot-review/",
+      "https://slotcatalog.com/en/slots/luxor-of-cleopatra",
+      "https://chipy.com/games/stakelogic/book-of-cleopatra",
+      "https://www.casinos.com/slots/luxor-of-cleopatra",
+      "https://caesarspalaceonline.com/games/luxor-of-cleopatra_bltae568ef77cd082fb/",
+      "https://www.pragmaticplay.com/en/games/luxor-of-cleopatra/",
+      "https://www.igamingtoday.com/luxor-of-cleopatra-slot-review/",
+      "https://assets.lotoquebec.com/ressources/assets/v3/assets/blt8296e79a7001648c/blt4dcc1a49847802b3/65143e462f930ae373d2c1c3/cleopatra_rules_en.pdf",
+      "https://www.mcluck.com/games/slots/immortal-ways-cleopatra",
+      "https://www.gamblingnews.com/news/join-the-queen-of-egypt-on-a-leisurely-stroll-in-pragmatic-plays-luxor-of-cleopatra/"
+    ]
+  }
+}
