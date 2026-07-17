@@ -1,0 +1,502 @@
+{
+  "url": "https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswaysladythf&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&lang=en&cur=USD",
+  "observations": {
+    "gameTitle": "Luxor of Cleopatra",
+    "gameSymbol": "vswaysladythf",
+    "provider": "Pragmatic Play",
+    "sessionMode": "demo",
+    "screenshotDir": "/Users/manhbd/Documents/projects/slot-game/slot-ai-agentic/agent/runs/luxor-of-cleopatra-260717-045842-029142/browser-screenshots/",
+    "screenshots": [
+      {
+        "file": "01-loaded.png",
+        "role": "load",
+        "note": "Initial game load / intro splash, default $2.00 bet, credit $100,000.00"
+      },
+      {
+        "file": "paytable-1.png",
+        "role": "paytable",
+        "note": "Page 1/6: symbol pay table for Cleopatra/Scarab/Ring/Coin/Eye-amulet + A-K-Q-J-10-9, WILD rules, 1024-ways diagram"
+      },
+      {
+        "file": "paytable-2.png",
+        "role": "paytable",
+        "note": "Page 2/6: WILD MULTIPLIER pay table, SCATTER pays, FREE SPINS trigger rule, VAULT odds table (1-6+ wild multiplier hits)"
+      },
+      {
+        "file": "paytable-3.png",
+        "role": "paytable",
+        "note": "Page 3/6: VAULT scatter-add-on rule, 20-position marking rule, MAX WIN 12,500x cap, BUY FEATURE cost/behavior"
+      },
+      {
+        "file": "paytable-4.png",
+        "role": "paytable",
+        "note": "Page 4/6: volatility descriptor, RTP 96.51% base / 96.56% buy-free-spins, min/max bet $0.20-$240.00"
+      },
+      {
+        "file": "paytable-5.png",
+        "role": "paytable",
+        "note": "Page 5/6: How-to-play + main game interface control legend"
+      },
+      {
+        "file": "paytable-6.png",
+        "role": "paytable",
+        "note": "Page 6/6: Settings menu legend, bet menu explanation, max win restatement"
+      },
+      {
+        "file": "paytable-1-verify.png",
+        "role": "paytable",
+        "note": "Re-confirmation capture of page 1/6 taken during final verification pass"
+      },
+      {
+        "file": "paytable-2-verify.png",
+        "role": "paytable",
+        "note": "Re-confirmation capture of page 2/6 taken during final verification pass"
+      },
+      {
+        "file": "paytable-3-verify.png",
+        "role": "paytable",
+        "note": "Re-confirmation capture of page 3/6 taken during final verification pass"
+      },
+      {
+        "file": "paytable-4-verify.png",
+        "role": "paytable",
+        "note": "Re-confirmation capture of page 4/6 taken during final verification pass"
+      },
+      {
+        "file": "paytable-5-verify.png",
+        "role": "paytable",
+        "note": "Re-confirmation capture of page 5/6 taken during final verification pass"
+      },
+      {
+        "file": "paytable-6-verify.png",
+        "role": "paytable",
+        "note": "Re-confirmation capture of page 6/6 taken during final verification pass"
+      },
+      {
+        "file": "buy-feature-panel.png",
+        "role": "buyFeature",
+        "note": "Buy Feature modal: \"$60.00 TRIGGER FREE SPINS WITH 3X SCATTERS\" at $2.00 base bet (30x total bet)"
+      },
+      {
+        "file": "win-small-3ways.png",
+        "role": "win",
+        "note": "First observed win: $1.00 on 3x Cleopatra symbols across 2 ways, $2.00 bet, no named tier banner"
+      },
+      {
+        "file": "freespins-trigger.png",
+        "role": "freeSpinsTrigger",
+        "note": "Guaranteed 3-scatter trigger spin produced by Buy Feature purchase"
+      },
+      {
+        "file": "freespins-intro.png",
+        "role": "freeSpinsTrigger",
+        "note": "\"CONGRATULATIONS! YOU HAVE WON 10 FREE SPINS\" intro overlay"
+      },
+      {
+        "file": "freespins-wildmultiplier.png",
+        "role": "freeSpinsPlay",
+        "note": "WILD MULTIPLIER (gold coin \"WILD x2\") symbol landing; Vault at $92, marked 16/20; \"LAST FREE SPIN\" banner"
+      },
+      {
+        "file": "freespins-outro.png",
+        "role": "freeSpinsPlay",
+        "note": "Free Spins round #1 completion: \"YOU HAVE WON $18.20 IN 10 FREE SPINS\""
+      },
+      {
+        "file": "autoplay-panel.png",
+        "role": "autoplayPanel",
+        "note": "Autoplay Settings panel: Turbo Spin / Quick Spin / Skip Screens checkboxes, autospins slider at 100"
+      },
+      {
+        "file": "reel-motion-turbo.png",
+        "role": "baseSpin",
+        "note": "Reels mid-spin with visible vertical motion blur under turbo mode"
+      },
+      {
+        "file": "wintier-nice.png",
+        "role": "win",
+        "note": "Named win-tier banner \"NICE!\": $45.00 win on $2.00 bet (22.5x bet), winged-Cleopatra overlay art"
+      },
+      {
+        "file": "freespins-transition-flash.png",
+        "role": "freeSpinsTrigger",
+        "note": "Animated golden-flash \"CONGRATULATIONS!\" transition into natural Free Spins round #4, caught mid-motion"
+      },
+      {
+        "file": "multiplier-stacked-x2x2.png",
+        "role": "freeSpinsPlay",
+        "note": "Two WILD MULTIPLIER (x2) symbols stacked on the same reel simultaneously during Free Spins"
+      }
+    ],
+    "board": {
+      "reels": 5,
+      "rows": 4,
+      "totalPositions": 20,
+      "cascading": false,
+      "waysToWin": 1024,
+      "notes": "Confirmed 5x4=20 grid via live board screenshots and paytable text (\"maximum number of possible ways to win is 1024\"; Vault rule references \"all 20 positions on the screen\")."
+    },
+    "symbols": [
+      {
+        "name": "CLEOPATRA (portrait card)",
+        "category": "high-pay",
+        "pays": {
+          "5": "$10.00",
+          "4": "$7.50",
+          "3": "$5.00",
+          "2": "$0.50"
+        },
+        "betReference": "$2.00 total bet",
+        "observed": true
+      },
+      {
+        "name": "Scarab Beetle",
+        "category": "high-pay",
+        "pays": {
+          "5": "$8.00",
+          "4": "$6.00",
+          "3": "$4.00",
+          "2": "$0.20"
+        },
+        "betReference": "$2.00 total bet",
+        "observed": true
+      },
+      {
+        "name": "Ring/Gem (purple ankh ring)",
+        "category": "high-pay",
+        "pays": {
+          "5": "$8.00",
+          "4": "$6.00",
+          "3": "$4.00",
+          "2": "$0.20"
+        },
+        "betReference": "$2.00 total bet",
+        "observed": true
+      },
+      {
+        "name": "Gold Coin (Cleopatra profile)",
+        "category": "mid-pay",
+        "pays": {
+          "5": "$7.00",
+          "4": "$5.00",
+          "3": "$2.00"
+        },
+        "betReference": "$2.00 total bet",
+        "observed": true
+      },
+      {
+        "name": "Gold Eye Amulet (curved gold icon with red gem)",
+        "category": "mid-pay",
+        "pays": {
+          "5": "$7.00",
+          "4": "$5.00",
+          "3": "$2.00"
+        },
+        "betReference": "$2.00 total bet",
+        "observed": "paytable only — not confirmed landing on live board this session"
+      },
+      {
+        "name": "Ace (A)",
+        "category": "low-pay",
+        "pays": {
+          "5": "$6.00",
+          "4": "$3.00",
+          "3": "$0.50"
+        },
+        "betReference": "$2.00 total bet",
+        "observed": true
+      },
+      {
+        "name": "King (K)",
+        "category": "low-pay",
+        "pays": {
+          "5": "$6.00",
+          "4": "$3.00",
+          "3": "$0.50"
+        },
+        "betReference": "$2.00 total bet",
+        "observed": true
+      },
+      {
+        "name": "Queen (Q)",
+        "category": "low-pay",
+        "pays": {
+          "5": "$5.00",
+          "4": "$2.00",
+          "3": "$0.30"
+        },
+        "betReference": "$2.00 total bet",
+        "observed": true
+      },
+      {
+        "name": "Jack (J)",
+        "category": "low-pay",
+        "pays": {
+          "5": "$5.00",
+          "4": "$2.00",
+          "3": "$0.30"
+        },
+        "betReference": "$2.00 total bet",
+        "observed": true
+      },
+      {
+        "name": "Ten (10)",
+        "category": "low-pay",
+        "pays": {
+          "5": "$4.00",
+          "4": "$1.00",
+          "3": "$0.30"
+        },
+        "betReference": "$2.00 total bet",
+        "observed": true
+      },
+      {
+        "name": "Nine (9)",
+        "category": "low-pay",
+        "pays": {
+          "5": "$4.00",
+          "4": "$1.00",
+          "3": "$0.20"
+        },
+        "betReference": "$2.00 total bet",
+        "observed": true
+      },
+      {
+        "name": "WILD (gold pyramid)",
+        "category": "wild",
+        "pays": null,
+        "rules": "Substitutes for all symbols except SCATTER. Appears on reels 2, 3 and 4 only. Base game only.",
+        "observed": true
+      },
+      {
+        "name": "WILD MULTIPLIER (gold coin \"WILD x2\")",
+        "category": "wild-multiplier",
+        "pays": {
+          "5": "$50.00",
+          "4": "$25.00",
+          "3": "$10.00",
+          "2": "$1.00"
+        },
+        "betReference": "$2.00 total bet",
+        "rules": "Appears on all 5 reels, only during Free Spins. Substitutes for all symbols except SCATTER. Carries a fixed x2 multiplier applied to any winning combination it participates in; multiple Wild Multipliers in the same win multiply together.",
+        "observed": true
+      },
+      {
+        "name": "SCATTER (lotus flower)",
+        "category": "scatter",
+        "pays": {
+          "5": "25x total bet",
+          "4": "5x total bet",
+          "3": "1x total bet"
+        },
+        "rules": "3, 4 or 5 scatters trigger Free Spins, always awarding 10 free spins.",
+        "observed": true
+      }
+    ],
+    "baseSpin": {
+      "observed": true,
+      "notes": "Multiple manual and autoplay base-game spins observed; single static evaluation per spin, standard reel-spin-and-stop animation, turbo mode shortens spin duration and adds vertical motion blur (reel-motion-turbo.png)."
+    },
+    "cascade": {
+      "observed": true,
+      "present": false,
+      "notes": "No tumble/cascade mechanic exists. Every spin (base and free spins) resolves in one static evaluation; board remains static after a win with no re-drop animation, confirmed on both small and named-tier wins."
+    },
+    "wins": [
+      {
+        "tier": null,
+        "amount": 1.0,
+        "bet": 2.0,
+        "multiplierOfBet": 0.5,
+        "description": "3x Cleopatra symbols on 2 ways",
+        "screenshot": "win-small-3ways.png",
+        "context": "base game manual spin"
+      },
+      {
+        "tier": "NICE!",
+        "amount": 45.0,
+        "bet": 2.0,
+        "multiplierOfBet": 22.5,
+        "description": "Named win-tier banner with winged-Cleopatra overlay art",
+        "screenshot": "wintier-nice.png",
+        "context": "autoplay/turbo spin, base game"
+      },
+      {
+        "tier": null,
+        "amount": 18.2,
+        "bet": 2.0,
+        "multiplierOfBet": 9.1,
+        "description": "Total win across 10 free spins, Free Spins round #1 (buy-feature triggered)",
+        "screenshot": "freespins-outro.png",
+        "context": "free spins round completion"
+      }
+    ],
+    "freeSpins": {
+      "triggered": true,
+      "played": true,
+      "triggerMethods": [
+        "buyFeature (guaranteed 3-scatter spin)",
+        "natural scatter landing during autoplay"
+      ],
+      "spinsAwarded": 10,
+      "spinsAwardedNote": "Rules state 3, 4 or 5 scatters all award the same 10 free spins regardless of count (only the associated scatter pay differs); consistent with 10-spin intro overlay observed this session.",
+      "roundsObserved": 5,
+      "roundsPlayedToCompletion": 5,
+      "itemizedRounds": "Only round #1 (buy-feature triggered) was itemized start-to-finish with intro/outro screenshots and an exact total win ($18.20). Rounds #2-5 occurred naturally during turbo-speed autoplay; their individual outcomes were tracked only via aggregate credit deltas, not itemized per-round screenshots — see anomalies.",
+      "vault": {
+        "startValue": "20x total bet",
+        "fillMechanism": "After the first free spin, 8 random positions on reels 2/3/4 are marked. Any further CLEOPATRA symbol landing on an unmarked position marks it. All 20 board positions must be marked to win the Vault.",
+        "wildMultiplierAddOns": "Random amount added to Vault whenever 1+ Wild Multiplier symbols hit in a spin, tiered by hit-count (1 hit: 1x/1.5x/2x/2.5x/5x/12.5x/25x/50x; 2 hits: 5x/10x/25x/50x/100x/250x/500x/2500x; 3 hits: 7.5x/15x/37.5x/75x/150x/375x/750x/12500x; 4 hits: 10x/20x/50x/100x/200x/500x/1000x/12500x; 5 hits: 12.5x/25x/62.5x/125x/250x/625x/1250x/12500x; 6+ hits: 15x/30x/75x/150x/300x/750x/1500x/12500x — all values x total bet).",
+        "scatterAddOns": "3/4/5 scatters landing during the FS round add 10x/50x/250x total bet to the Vault respectively.",
+        "bestObservedProgress": "18/20 positions marked (observed twice across the 5 rounds); Vault was never fully unlocked/won this session.",
+        "observed": true
+      },
+      "wildMultiplier": {
+        "present": true,
+        "observed": true,
+        "visual": "Distinct golden glow/sparkle animation on landing; a stacked-pair occurrence (two x2 symbols on the same reel) was directly captured (multiplier-stacked-x2x2.png)."
+      },
+      "notes": "Free Spins were triggered both via Buy Feature (guaranteed) and naturally via scatter landings during autoplay, satisfying both trigger paths this session."
+    },
+    "buyFeature": {
+      "observed": true,
+      "present": true,
+      "cost": "30x total bet",
+      "costAtSessionBet": "$60.00 at $2.00 total bet",
+      "behavior": "Instantly triggers the Free Spins round from the base game. The triggering base-game spin always lands exactly 3 SCATTER symbols (guaranteed 3-scatter trigger), per paytable page 3/6 text and directly observed in freespins-trigger.png.",
+      "screenshot": "buy-feature-panel.png"
+    },
+    "multipliers": {
+      "present": true,
+      "scope": "Free Spins only, all 5 reels",
+      "fixedValue": "x2 per Wild Multiplier symbol",
+      "stackingRule": "When multiple Wild Multiplier symbols participate in the same winning combination, their multiplier values multiply together (per paytable page 2/6 rule text). A physical stacked-pair (two x2 symbols on one reel) was visually captured (multiplier-stacked-x2x2.png); an isolated screenshot proving the exact multiplied payout number for that specific spin was not captured, so the multiplication math itself is reported from rule text plus supporting visual evidence, not independently reverse-engineered from an observed payout.",
+      "order": "Multiplier applies at win evaluation, after reels stop and before the win amount animates in; Vault wild-multiplier-hit add-ons are applied in the same spin resolution as the multiplier-boosted win."
+    },
+    "paytable": {
+      "opened": true,
+      "figures": [
+        {
+          "page": 1,
+          "screenshot": "paytable-1.png",
+          "content": "Symbol pays for Cleopatra, Scarab, Ring, Coin, Eye-amulet (high/mid symbols) and A/K/Q/J/10/9 (low symbols); WILD substitution rule (reels 2-4 only); 1024-ways diagram showing valid (connected) vs invalid (disconnected) win patterns."
+        },
+        {
+          "page": 2,
+          "screenshot": "paytable-2.png",
+          "content": "WILD MULTIPLIER pays and rules (all reels, free spins only, x2 fixed multiplier, stacks multiplicatively); SCATTER pays (1x/5x/25x total bet for 3/4/5); FREE SPINS trigger rule (10 spins for 3/4/5 scatters); full VAULT odds table by wild-multiplier hit count (1 through 6+)."
+        },
+        {
+          "page": 3,
+          "screenshot": "paytable-3.png",
+          "content": "VAULT scatter add-on amounts (10x/50x/250x); 20-position marking mechanic (8 random after spin 1, then Cleopatra-symbol marks); MAX WIN cap 12,500x bet with forfeiture of remaining spins; BUY FEATURE cost (30x bet) and guaranteed-3-scatter behavior."
+        },
+        {
+          "page": 4,
+          "screenshot": "paytable-4.png",
+          "content": "Volatility badge (labeled \"VOLATILITY\" with a 5-icon bolt rating; exact filled-bolt count not clearly legible in the capture, but the adjoining descriptor text begins \"Medium volatility games pay out steadily...\"); RTP 96.51% base / 96.56% with Buy Free Spins; bet range $0.20-$240.00."
+        },
+        {
+          "page": 5,
+          "screenshot": "paytable-5.png",
+          "content": "How-to-play instructions and main game interface control legend (bet +/-, settings menu, spin-speed cycle, sound toggle, info button, credit/bet labels, spin button, autoplay button)."
+        },
+        {
+          "page": 6,
+          "screenshot": "paytable-6.png",
+          "content": "Settings menu legend (Intro Screen, Ambient, Sound FX, Game History toggles); information-screen navigation; bet menu explanation; restated max-win cap."
+        }
+      ],
+      "paylines": {
+        "type": "ways",
+        "waysToWin": 1024,
+        "diagram": "Two small 5x4 grid diagrams on paytable page 1: a green-checked diagram shows symbols connected left-to-right across adjacent reels (valid way-to-win pattern); a red-X diagram shows a disconnected/skipped reel (invalid pattern). Wins pay left-to-right starting from the leftmost reel on adjacent reels. There is no fixed/numbered payline index since this is a Ways-to-win game, not a traditional payline game.",
+        "screenshot": "paytable-1.png"
+      }
+    },
+    "ui": {
+      "controls": {
+        "spin": "Center circular spin button (also SPACE/ENTER keys)",
+        "betAdjust": "+ and - buttons open the bet menu (Bet Multiplier, Bet, Coin Value, Total Bet, Bet Max)",
+        "autoplay": "AUTOPLAY button opens Autoplay Settings; click again to stop mid-run",
+        "spinSpeed": "Cycling icon toggles Normal Speed / Quick Spin / Turbo Spin",
+        "sound": "Speaker icon toggles sound/music on-off",
+        "info": "(i) icon opens the paytable/Game Rules overlay",
+        "settingsMenu": "Hamburger/menu icon opens System Settings (Intro Screen, Ambient, Sound FX, Game History)",
+        "buyFeature": "Dedicated \"BUY FEATURE\" panel button, persistently visible bottom-left of the game frame"
+      },
+      "labels": {
+        "credit": "Shows current balance, click to switch coins/cash view",
+        "bet": "Shows current total bet, click to switch coins/cash view"
+      },
+      "observed": true
+    },
+    "anteBet": {
+      "present": false,
+      "observed": true,
+      "notes": "Opened the bet +/- adjustment panel and confirmed only a standard Bet Multiplier / Bet / Coin Value / Total Bet / Bet Max control set exists. No Ante Bet, Super Spin, or other special-bet-mode toggle was found anywhere in the UI this session."
+    },
+    "presentation": {
+      "reelMotion": "Reels spin top-to-bottom with a brief blur-in/settle-out per stop; in Turbo Spin the whole reel-set shows pronounced vertical motion blur and each reel's spin-to-stop resolves in well under 1 second (reel-motion-turbo.png).",
+      "anticipation": "unobserved — no distinct anticipation-hold/slow-down animation for near-miss scatters was specifically isolated or screenshotted this session.",
+      "winTiers": "At least one named win-tier banner observed: \"NICE!\", shown with a gold-toned banner and winged-Cleopatra overlay artwork, for a $45.00 win on a $2.00 bet (22.5x bet). Higher named tiers (e.g. BIG WIN / MEGA WIN / SUPER WIN or similar) were not triggered/observed this session.",
+      "cascadeFeel": "N/A — non-cascading game; no tumble/re-drop animation exists.",
+      "multiplierFeel": "WILD MULTIPLIER symbols (gold coin \"WILD x2\") show a distinct golden glow/sparkle on landing during Free Spins, visually and thematically separate from the base-game WILD (gold pyramid) (freespins-wildmultiplier.png).",
+      "symbolAnim": "Winning symbols appear to highlight/glow subtly during win presentation (observed in win-small-3ways.png and wintier-nice.png); frame-level animation timing was not precisely measured.",
+      "ambient": "Consistent Egyptian temple/lotus-pool courtyard background art across all screens, with an idle Cleopatra figure and lit torches on either side of the reels; audio ambience was not assessed (no audio-capture tool used this session).",
+      "transitions": "Entry into a natural Free Spins round is preceded by a dramatic animated golden-flash full-screen \"CONGRATULATIONS!\" overlay (freespins-transition-flash.png, caught mid-motion) before settling into the standard \"10 FREE SPINS\" intro card.",
+      "juice": "Golden particle/glow effects accompany Wild Multiplier landings; named win-tier banners pop in with overlay artwork; Free Spins entry uses a full-screen flash transition. No other juice elements (e.g. screen shake) were specifically observed/confirmed this session."
+    },
+    "eventOrder": [
+      "Game loaded to intro splash (01-loaded.png), default $2.00 bet",
+      "Opened paytable/Game Rules overlay, paged through all 6 pages, screenshotted each",
+      "Ran manual base-game spins; observed first win ($1.00, 3x Cleopatra on 2 ways)",
+      "Opened Buy Feature panel ($60.00 = 30x $2.00 bet)",
+      "Purchased Buy Feature -> guaranteed 3-scatter trigger spin (freespins-trigger.png)",
+      "Free Spins intro overlay: \"CONGRATULATIONS! YOU HAVE WON 10 FREE SPINS\"",
+      "Played Free Spins round #1 to completion; observed Wild Multiplier landing, Vault at $92 (16/20 marked), \"LAST FREE SPIN\" banner",
+      "Free Spins round #1 completed: \"YOU HAVE WON $18.20 IN 10 FREE SPINS\"",
+      "Opened Autoplay Settings panel, enabled Turbo Spin, set autospins to 100",
+      "Ran sustained turbo-speed autoplay session hunting rare events/win tiers",
+      "Observed reel motion blur under turbo (reel-motion-turbo.png)",
+      "Observed named win-tier banner \"NICE!\" ($45.00 win on $2.00 bet)",
+      "Autoplay naturally triggered additional Free Spins rounds (#2-5), including a dramatic golden-flash transition before round #4",
+      "Observed two Wild Multiplier (x2) symbols stacked on the same reel during a Free Spins round",
+      "Opened bet +/- panel to check for Ante Bet/special-bet modes; confirmed none exist (standard Bet Multiplier/Bet/Coin Value/Total Bet/Bet Max only)",
+      "Reverted bet from a temporary $3.00 back to $2.00 and closed the bet panel",
+      "Confirmed autoplay stopped/idle",
+      "Re-opened and re-paged the full 6-page paytable a second time to verify exact figures for this report (paytable-N-verify.png)",
+      "Closed paytable, confirmed final idle state: bet $2.00, credit $99,960.70, autoplay idle"
+    ],
+    "anomalies": [
+      "Vault was never fully unlocked across the 5 observed Free Spins rounds; best progress reached was 18/20 marked positions (observed twice). No Vault payout was ever collected/observed.",
+      "No Free Spins retrigger (additional scatters landing during an active Free Spins round) was observed this session.",
+      "Named win-tier banners beyond \"NICE!\" (e.g. BIG WIN, MEGA WIN, SUPER WIN, or similarly escalating tiers) were not observed/triggered this session — likely a variance/session-length limitation, not confirmation of their absence from the game.",
+      "During fast turbo-speed autoplay in Free Spins round #4, a credit/win reconciliation gap was noted: a mid-round WIN readout of $48.50 did not perfectly reconcile arithmetically with the post-round credit total, most likely because additional base-game autoplay spins executed between screenshot captures at turbo speed. This was not resolved to an exact figure and is reported as an honest approximation gap rather than a fabricated number.",
+      "Free Spins rounds #2-5 were not individually itemized with dedicated intro/outro screenshots (only round #1, the buy-feature-triggered round, was fully itemized); their outcomes were inferred only from aggregate credit deltas during autoplay.",
+      "The 5th high-pay symbol (\"Gold Eye Amulet\") was confirmed only from the static paytable page, not from an observed live-board win this session.",
+      "Volatility badge's exact filled-bolt-icon count was not clearly legible in the captured screenshot; volatility is reported based on the adjoining descriptor text (\"Medium volatility...\") rather than a directly counted icon fill level."
+    ]
+  },
+  "coverage": {
+    "required": [
+      "base_spin",
+      "cascade",
+      "win",
+      "free_spins",
+      "buy_feature",
+      "paytable"
+    ],
+    "observed": [
+      "base_spin",
+      "cascade",
+      "win",
+      "free_spins",
+      "buy_feature",
+      "paytable"
+    ],
+    "missing": [],
+    "confirmed_absent": [],
+    "complete": true
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "clean": false,
+  "findings": [
+    {
+      "kind": "dead_link",
+      "doc": "art-design.md",
+      "item": "offset,hex"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "buy_feature-mechanics.md",
+      "item": "buy_feature_decline"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "free_spins-mechanics.md",
+      "item": "fs_board_fill"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "free_spins-mechanics.md",
+      "item": "fs_reels_land"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "free_spins-mechanics.md",
+      "item": "fs_scatter_check"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "vault-mechanics.md",
+      "item": "fs_reels_land"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "vault-mechanics.md",
+      "item": "fs_scatter_check"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "wild_multiplier-mechanics.md",
+      "item": "fs_reels_land"
+    }
+  ],
+  "scored": [
+    {
+      "kind": "dead_link",
+      "doc": "art-design.md",
+      "item": "offset,hex"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "buy_feature-mechanics.md",
+      "item": "buy_feature_decline"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "free_spins-mechanics.md",
+      "item": "fs_board_fill"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "free_spins-mechanics.md",
+      "item": "fs_reels_land"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "free_spins-mechanics.md",
+      "item": "fs_scatter_check"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "vault-mechanics.md",
+      "item": "fs_reels_land"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "vault-mechanics.md",
+      "item": "fs_scatter_check"
+    },
+    {
+      "kind": "undefined_event_id",
+      "doc": "wild_multiplier-mechanics.md",
+      "item": "fs_reels_land"
+    }
+  ],
+  "applicable": {
+    "event_ids": true,
+    "links": true
+  }
+}

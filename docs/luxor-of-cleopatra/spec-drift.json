@@ -1,0 +1,55 @@
+{
+  "patched": false,
+  "removed_features": [],
+  "scalar_flags": [
+    {
+      "section": "event-order-and-determinism.md#Deterministic Spin Event Order"
+    },
+    {
+      "section": "event-order-and-determinism.md#Ordering Invariants"
+    },
+    {
+      "section": "free_spins-mechanics.md#Algorithm"
+    },
+    {
+      "section": "free_spins-mechanics.md#QA checklist"
+    },
+    {
+      "section": "math-and-rtp.md#Headline figures"
+    },
+    {
+      "section": "math-and-rtp.md#Win math (the rule)"
+    },
+    {
+      "section": "math-and-rtp.md#Full paytable"
+    },
+    {
+      "section": "presentation-and-feel.md#Multiplier Effects"
+    },
+    {
+      "section": "product-spec.md#Grid"
+    },
+    {
+      "section": "product-spec.md#Full Symbol Table"
+    },
+    {
+      "section": "test-vectors.md#TV-05 — Two symbol ids winning simultaneously"
+    },
+    {
+      "section": "test-vectors.md#TV-07 — Wild substitution"
+    },
+    {
+      "section": "test-vectors.md#TV-09 — Free-spins wild multiplier applied once"
+    },
+    {
+      "section": "vault-mechanics.md#Algorithm"
+    },
+    {
+      "section": "wild_multiplier-mechanics.md#Trigger"
+    },
+    {
+      "section": "wild_multiplier-mechanics.md#Algorithm"
+    }
+  ],
+  "reason": "nothing_to_patch"
+}
