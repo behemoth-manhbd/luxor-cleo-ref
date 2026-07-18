@@ -8,3 +8,6 @@ tsconfig.tsbuildinfo
 .env
 .env.*
 !.env.example
+
+# large session recordings — exceed GitHub 100MB limit
+docs/**/*.webm
