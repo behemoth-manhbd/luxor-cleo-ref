@@ -1,0 +1,167 @@
+{
+  "status": "written",
+  "reason": null,
+  "cassette_key": "luxor-of-cleopatra:paytable:4728acfe2f35c0a2",
+  "prompt_version": 1,
+  "model": "opus",
+  "tokens": {
+    "input": 6,
+    "output": 9346
+  },
+  "cost": 0.647184,
+  "screenshots": 6,
+  "changed_paths": [
+    "math.paytable.cleopatra.2",
+    "math.paytable.cleopatra.3",
+    "math.paytable.cleopatra.4",
+    "math.paytable.scarab.2",
+    "math.paytable.scarab.3",
+    "math.paytable.scarab.4",
+    "math.paytable.ring.2",
+    "math.paytable.ring.3",
+    "math.paytable.ring.4",
+    "math.paytable.ring.5",
+    "math.paytable.coin.3",
+    "math.paytable.coin.4",
+    "math.paytable.eye_of_horus.3",
+    "math.paytable.eye_of_horus.4",
+    "math.paytable.eye_of_horus.5",
+    "math.paytable.A.3",
+    "math.paytable.A.4",
+    "math.paytable.K.3",
+    "math.paytable.K.4",
+    "math.paytable.K.5",
+    "math.paytable.Q.3",
+    "math.paytable.Q.4",
+    "math.paytable.J.3",
+    "math.paytable.J.4",
+    "math.paytable.J.5",
+    "math.paytable.T.3",
+    "math.paytable.T.4",
+    "math.paytable.9.2",
+    "math.paytable.9.3",
+    "math.paytable.9.4"
+  ],
+  "corrected_values": {
+    "math.paytable.cleopatra.2": {
+      "old": null,
+      "new": 0.25
+    },
+    "math.paytable.cleopatra.3": {
+      "old": 1,
+      "new": 2.5
+    },
+    "math.paytable.cleopatra.4": {
+      "old": 2,
+      "new": 3.75
+    },
+    "math.paytable.scarab.2": {
+      "old": null,
+      "new": 0.1
+    },
+    "math.paytable.scarab.3": {
+      "old": 0.8,
+      "new": 2.0
+    },
+    "math.paytable.scarab.4": {
+      "old": 1.5,
+      "new": 3.0
+    },
+    "math.paytable.ring.2": {
+      "old": null,
+      "new": 0.1
+    },
+    "math.paytable.ring.3": {
+      "old": 0.5,
+      "new": 2.0
+    },
+    "math.paytable.ring.4": {
+      "old": 1,
+      "new": 3.0
+    },
+    "math.paytable.ring.5": {
+      "old": 3.5,
+      "new": 4.0
+    },
+    "math.paytable.coin.3": {
+      "old": 0.5,
+      "new": 1.0
+    },
+    "math.paytable.coin.4": {
+      "old": 1,
+      "new": 2.5
+    },
+    "math.paytable.eye_of_horus.3": {
+      "old": 0.6,
+      "new": 1.0
+    },
+    "math.paytable.eye_of_horus.4": {
+      "old": 1.2,
+      "new": 2.5
+    },
+    "math.paytable.eye_of_horus.5": {
+      "old": 4,
+      "new": 3.5
+    },
+    "math.paytable.A.3": {
+      "old": 0.3,
+      "new": 0.25
+    },
+    "math.paytable.A.4": {
+      "old": 0.6,
+      "new": 1.5
+    },
+    "math.paytable.K.3": {
+      "old": 0.3,
+      "new": 0.25
+    },
+    "math.paytable.K.4": {
+      "old": 0.6,
+      "new": 1.5
+    },
+    "math.paytable.K.5": {
+      "old": 2.5,
+      "new": 3.0
+    },
+    "math.paytable.Q.3": {
+      "old": 0.25,
+      "new": 0.15
+    },
+    "math.paytable.Q.4": {
+      "old": 0.5,
+      "new": 1.0
+    },
+    "math.paytable.J.3": {
+      "old": 0.2,
+      "new": 0.15
+    },
+    "math.paytable.J.4": {
+      "old": 0.5,
+      "new": 1.0
+    },
+    "math.paytable.J.5": {
+      "old": 2,
+      "new": 2.5
+    },
+    "math.paytable.T.3": {
+      "old": 0.2,
+      "new": 0.15
+    },
+    "math.paytable.T.4": {
+      "old": 0.4,
+      "new": 0.5
+    },
+    "math.paytable.9.2": {
+      "old": null,
+      "new": 0.1
+    },
+    "math.paytable.9.3": {
+      "old": 0.2,
+      "new": 0.15
+    },
+    "math.paytable.9.4": {
+      "old": 0.4,
+      "new": 0.5
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "patched": false,
+  "removed_features": [],
+  "scalar_flags": [
+    {
+      "section": "event-order-and-determinism.md#Deterministic Spin Event Order"
+    },
+    {
+      "section": "free_spins-mechanics.md#Algorithm"
+    },
+    {
+      "section": "math-and-rtp.md#Full Paytable"
+    },
+    {
+      "section": "product-spec.md#Grid & Win Rule"
+    },
+    {
+      "section": "product-spec.md#Full Symbol Table"
+    },
+    {
+      "section": "test-vectors.md#TV-02 — Exact threshold (`cleopatra` 3-of-a-kind, 1 way)"
+    },
+    {
+      "section": "test-vectors.md#TV-03 — Pay-band boundary (`cleopatra` 4-reel run)"
+    },
+    {
+      "section": "test-vectors.md#TV-05 — Two symbols winning simultaneously"
+    },
+    {
+      "section": "test-vectors.md#TV-07 — Wild substitution (base game, `wild_base` on reel 2)"
+    },
+    {
+      "section": "test-vectors.md#TV-10 — Vault accumulation & forfeit (round state)"
+    },
+    {
+      "section": "test-vectors.md#TV-13 — Bet-multiplication check (non-1 bets)"
+    },
+    {
+      "section": "vault_bonus-mechanics.md#Parameters"
+    },
+    {
+      "section": "vault_bonus-mechanics.md#Algorithm"
+    },
+    {
+      "section": "vault_bonus-mechanics.md#QA checklist"
+    },
+    {
+      "section": "math-and-rtp.md#Provenance / Derivability Note"
+    }
+  ],
+  "reason": "nothing_to_patch"
+}

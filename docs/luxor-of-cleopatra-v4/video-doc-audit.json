@@ -1,0 +1,22 @@
+{
+  "status": "skipped",
+  "reason": "no_api_key",
+  "cassette_key": "luxor-of-cleopatra:video-doc-audit:a8777042c4beebef",
+  "prompt_version": 1,
+  "model": "gemini-2.5-flash",
+  "videos": [
+    "browser-play.webm",
+    "freespin-play.webm"
+  ],
+  "highSeverity": 0,
+  "missing_support": [],
+  "capped_fields": [],
+  "video": "browser-play.webm",
+  "axes": {
+    "mechanics": [],
+    "paytable": [],
+    "playerFeel": []
+  },
+  "timeline": [],
+  "discrepancies": []
+}

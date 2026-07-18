@@ -1,0 +1,9 @@
+{
+  "clean": true,
+  "findings": [],
+  "scored": [],
+  "applicable": {
+    "event_ids": true,
+    "links": true
+  }
+}

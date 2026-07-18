@@ -1,0 +1,30 @@
+{
+  "coverage": 0.948,
+  "per_check": {
+    "files": 1.0,
+    "features": 1.0,
+    "symbols": 1.0,
+    "grid": 1.0,
+    "math": 1.0,
+    "references": 1.0,
+    "detail": 1.0,
+    "truthfulness": 1.0,
+    "determinism": 1.0,
+    "vectors": 0.8,
+    "completeness": 0.6
+  },
+  "gaps": [
+    {
+      "kind": "completeness",
+      "item": "rebuy-documented"
+    },
+    {
+      "kind": "completeness",
+      "item": "ui-doc-present"
+    },
+    {
+      "kind": "vectors",
+      "item": "estimated-hygiene"
+    }
+  ]
+}

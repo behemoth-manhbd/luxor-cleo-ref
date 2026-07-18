@@ -1,0 +1,372 @@
+{
+  "url": "https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=vswaysladythf&websiteUrl=https%3A%2F%2Fdemogamesfree.pragmaticplay.net&jurisdiction=99&lobby_url=https%3A%2F%2Fwww.pragmaticplay.com%2Fen%2F&lang=en&cur=USD",
+  "observations": {
+    "game": {
+      "name": "Luxor of Cleopatra",
+      "symbol": "vswaysladythf",
+      "provider": "Pragmatic Play",
+      "mechanic": "1024 ways to win",
+      "reels": 5,
+      "rows": 4,
+      "mode": "demo/fun (no real money entered or accepted at any point)"
+    },
+    "paytable": {
+      "opened": true,
+      "pages": 6,
+      "paylinesDiagramPresent": false,
+      "paylinesDiagramReason": "Confirmed on paytable page 1: this is a 1024-ways game, not fixed paylines, so no paylines diagram exists.",
+      "rtpBase": "96.51%",
+      "rtpBuyFeature": "96.56%",
+      "maxWinCap": "12,500x bet (round ends immediately if reached; not observed this session)",
+      "symbols": {
+        "wild": "Pyramid icon; restricted to reels 2, 3, 4 in base game only",
+        "wildMultiplier": "Gold coin 'WILD x2'; appears on ANY reel but ONLY during Free Spins; carries persistent x2 multiplier that stacks/multiplies when multiple land in one win",
+        "scatter": "White/pink lotus flower; triggers Free Spins on 3+",
+        "premiumHigh": "Cleopatra portrait symbol (highest regular pay, also marks VAULT positions during Free Spins)",
+        "premiumMid": [
+          "Ankh/ruby ring",
+          "Winged scarab beetle"
+        ],
+        "premiumLow": "Eye of Horus (gold, pink gem)",
+        "royals": [
+          "A",
+          "K",
+          "Q",
+          "J",
+          "10",
+          "9"
+        ]
+      },
+      "note": "Exact per-symbol numeric payout figures were transcribed verbatim onto disk via paytable-1..6.png screenshots rather than re-typed here, to avoid any transcription drift from the source images."
+    },
+    "baseSpin": {
+      "observed": true,
+      "waysMechanic": true,
+      "backgroundVariants": [
+        "night desert exterior with moon/shooting star",
+        "daytime marble bathhouse/pool interior"
+      ],
+      "presentationNotes": "No reel-stop 'thud' anticipation escalation beyond standard blur/settle; win resolution shows a flat 'WIN $X.XX' banner with itemized 'NX PAYS $Y ON Z WAYS' breakdown text; no symbol dissolve/tumble."
+    },
+    "cascade": {
+      "present": false,
+      "observed": false,
+      "detail": "No tumble/cascade animation observed on any win resolution across the full session (manual spins + ~250 autoplay spins + 4 free-spins rounds); paytable text never references tumble/cascade mechanics."
+    },
+    "buyFeature": {
+      "present": true,
+      "observed": true,
+      "cost": 60.0,
+      "costMultiplier": "30x total bet",
+      "betAtPurchase": 2.0,
+      "behavior": "Guarantees a spin landing exactly 3 scatters, immediately triggering a 10-spin Free Spins round."
+    },
+    "anteBet": {
+      "present": false,
+      "observed": false,
+      "detail": "No ante-bet/special-bet mode exists in this game's UI. The '+' bet button opens a 'BET MULTIPLIER 20x' configuration panel with only Bet / Coin Value / Total Bet / Bet Max controls — no ante toggle of any kind."
+    },
+    "freeSpins": {
+      "triggered": true,
+      "played": true,
+      "spinsAwarded": 10,
+      "spinsAwardedNote": "Fixed at 10 spins regardless of whether 3, 4, or 5 scatters landed on trigger.",
+      "roundsObserved": 5,
+      "roundsObservedBreakdown": "3 naturally triggered (via scatters during base-game autoplay) + 1 triggered via Buy Feature",
+      "respin": {
+        "present": false,
+        "observed": false,
+        "detail": "No instance observed of an extra spin that retains the board/multiplier without decrementing the remaining-spins counter."
+      },
+      "retrigger": {
+        "present": false,
+        "observed": false,
+        "detail": "Scatters re-appearing mid-round add a flat dollar amount to the VAULT but never increased the remaining-spins counter; every round observed counted down 10→0 with no additions to spins remaining."
+      },
+      "vaultMechanic": {
+        "present": true,
+        "startValue": "20x total bet",
+        "growth": "Random amount added when Wild Multiplier(s) land; flat amount added when 3/4/5 scatters re-appear mid-round",
+        "payoutCondition": "Pays out only if all 20 board positions become 'marked' (via Cleopatra-symbol hits) by round end; otherwise forfeited entirely",
+        "completed20of20": false,
+        "peakMarkedObserved": "16/20 (reached twice, in the buy-feature round and in the 4th/final natural round)",
+        "note": "Across all 4 rounds observed this session, the vault was forfeited every time — 20/20 was never reached. This is reported honestly as a rare/high-variance event not captured to payout in this sample."
+      },
+      "multiplierPersistence": "Wild Multiplier (x2) values combine multiplicatively when multiple land in the same win on one spin; does not persist/carry over between spins within the round.",
+      "roundTotals": [
+        {
+          "round": 1,
+          "trigger": "natural",
+          "totalWin": 6.0,
+          "bet": 2.0,
+          "vaultForfeitedAt": 113.0,
+          "vaultMarked": "16/20"
+        },
+        {
+          "round": 2,
+          "trigger": "buyFeature",
+          "totalWin": 14.2,
+          "bet": 2.0,
+          "vaultForfeitedAt": 56.0,
+          "vaultMarked": "16/20"
+        },
+        {
+          "round": 3,
+          "trigger": "natural",
+          "totalWin": 13.2,
+          "bet": 2.0,
+          "vaultForfeitedAt": 83.0,
+          "vaultMarked": "unspecified <20/20"
+        },
+        {
+          "round": 4,
+          "trigger": "natural",
+          "totalWin": "unobserved",
+          "bet": 2.0,
+          "vaultForfeitedAt": 52.0,
+          "vaultMarked": "16/20",
+          "note": "'Skip Screens' autoplay setting suppressed the round-outro summary card; only per-spin win increments (up to $11.60 on the final spin) were captured, not the round total."
+        }
+      ],
+      "biggestWinConfirmed": 14.2
+    },
+    "wins": [
+      {
+        "amount": 0.5,
+        "bet": 2.0,
+        "context": "base game, first manual spin"
+      },
+      {
+        "amount": 0.0,
+        "bet": 2.0,
+        "context": "base game, no-win board example"
+      },
+      {
+        "amount": 22.0,
+        "bet": 2.0,
+        "context": "free spins, Wild Multiplier (x2) landing"
+      },
+      {
+        "amount": 26.0,
+        "bet": 2.0,
+        "context": "base game, largest plain 'WIN' banner observed prior to discovering the named tier banner (13x bet)"
+      },
+      {
+        "amount": 63.04,
+        "bet": 2.0,
+        "tier": "MEGA",
+        "context": "base game autoplay; named win-tier banner 'MEGA!' with winged-Cleopatra graphic and coin-particle effect; value observed mid count-up animation from $16.98 up to $63.04 (last captured value, ~31.5x bet)"
+      },
+      {
+        "amount": 6.0,
+        "bet": 2.0,
+        "context": "free spins round 1 total (vault forfeited)"
+      },
+      {
+        "amount": 14.2,
+        "bet": 2.0,
+        "context": "free spins round 2 total, buy-feature triggered (vault forfeited)"
+      },
+      {
+        "amount": 13.2,
+        "bet": 2.0,
+        "context": "free spins round 3 total (vault forfeited)"
+      }
+    ],
+    "uiInventory": {
+      "controls": [
+        {
+          "label": "Buy Feature",
+          "location": "top-left panel",
+          "action": "opens Buy Feature confirmation panel"
+        },
+        {
+          "icon": "hamburger/menu",
+          "location": "bottom-left",
+          "action": "opens System Settings modal"
+        },
+        {
+          "icon": "info (i)",
+          "location": "bottom-left, next to menu",
+          "action": "opens paytable/rules pages (6 pages, arrow-navigated)"
+        },
+        {
+          "icon": "sound toggle",
+          "location": "bottom-left, below menu",
+          "action": "mutes/unmutes audio"
+        },
+        {
+          "icon": "minus (-)",
+          "location": "bottom-right of control bar",
+          "action": "decreases bet"
+        },
+        {
+          "icon": "plus (+)",
+          "location": "bottom-right of control bar",
+          "action": "opens Bet Multiplier configuration panel (Bet / Coin Value / Total Bet / Bet Max)"
+        },
+        {
+          "icon": "spin/stop circle",
+          "location": "bottom-right, center",
+          "action": "spins reels; hold for turbo"
+        },
+        {
+          "label": "AUTOPLAY",
+          "location": "bottom-right, below spin circle",
+          "action": "single click opens Autoplay Settings panel when idle; while autoplay is running, clicking this TEXT LABEL (not the icon) is the reliable way to cancel autoplay"
+        }
+      ],
+      "modals": [
+        {
+          "title": "Autoplay Settings",
+          "trigger": "click AUTOPLAY label/icon while idle",
+          "contents": "Turbo Spin / Quick Spin / Skip Screens checkboxes (Turbo and Quick Spin are mutually exclusive), Number of Autospins slider (verified range includes at least 100; instructions indicated up to 1000), Start Autoplay button",
+          "closeMethod": "X icon or Start Autoplay"
+        },
+        {
+          "title": "Buy Feature panel",
+          "trigger": "click Buy Feature button",
+          "contents": "Cost display ($60.00 at $2.00 bet), confirm/cancel controls",
+          "closeMethod": "X icon or confirm purchase"
+        },
+        {
+          "title": "System Settings",
+          "trigger": "click hamburger menu icon",
+          "contents": "Battery Saver toggle, Ambient Music toggle, Sound FX toggle, Intro Screen toggle, Game History link, Total Bet control",
+          "closeMethod": "X icon"
+        },
+        {
+          "title": "Bet Multiplier panel",
+          "trigger": "click '+' bet icon",
+          "contents": "Bet stepper, Coin Value stepper, Total Bet stepper, Bet Max button; header reads 'BET MULTIPLIER 20x' (Total Bet = Bet × Coin Value × 20)",
+          "closeMethod": "X icon"
+        }
+      ],
+      "gameHistoryModal": "unobserved (link seen inside System Settings but not opened, due to time budget)"
+    },
+    "anomalies": [
+      "VAULT bonus-within-bonus never reached 20/20 payout across all 4 free-spins rounds observed this session (peak 16/20 twice) — reported honestly as unconfirmed-to-payout rather than fabricated as achieved.",
+      "Free spins round 4's total win amount was not captured because the 'Skip Screens' autoplay setting suppressed the round-outro summary card that displays the total.",
+      "Only one named win-tier banner ('MEGA!') was observed in this session's spin volume; other possible tiers (e.g. Big Win, Super Win, Epic Win) were not observed and their existence/thresholds remain unconfirmed, not confirmed absent.",
+      "No paylines diagram exists or was needed — confirmed via paytable page 1 that this is a 1024-ways game.",
+      "No ante-bet/special-bet mode exists in this game.",
+      "No cascade/tumble mechanic exists in this game.",
+      "No native browser dialogs (alert/confirm/prompt) were triggered at any point in the session.",
+      "Game History modal was not opened due to time budget constraints.",
+      "Exact per-symbol paytable payout figures were captured verbatim only in the saved paytable-1..6.png screenshots, not re-transcribed as numeric data in this JSON, to avoid unverified transcription."
+    ],
+    "screenshots": [
+      {
+        "file": "01-loaded.png",
+        "role": "base_spin"
+      },
+      {
+        "file": "paytable-1.png",
+        "role": "paytable"
+      },
+      {
+        "file": "paytable-2.png",
+        "role": "paytable"
+      },
+      {
+        "file": "paytable-3.png",
+        "role": "paytable"
+      },
+      {
+        "file": "paytable-4.png",
+        "role": "paytable"
+      },
+      {
+        "file": "paytable-5.png",
+        "role": "paytable"
+      },
+      {
+        "file": "paytable-6.png",
+        "role": "paytable"
+      },
+      {
+        "file": "base_spin-win1.png",
+        "role": "base_spin"
+      },
+      {
+        "file": "base_spin-nowin.png",
+        "role": "base_spin"
+      },
+      {
+        "file": "modal-autoplay.png",
+        "role": "autoplay"
+      },
+      {
+        "file": "free_spins-trigger.png",
+        "role": "free_spins"
+      },
+      {
+        "file": "free_spins-vault-progress.png",
+        "role": "free_spins"
+      },
+      {
+        "file": "free_spins-outro.png",
+        "role": "free_spins"
+      },
+      {
+        "file": "free_spins-wildmultiplier.png",
+        "role": "free_spins"
+      },
+      {
+        "file": "free_spins-waybreakdown.png",
+        "role": "free_spins"
+      },
+      {
+        "file": "modal-buy-feature.png",
+        "role": "buy_panel"
+      },
+      {
+        "file": "free_spins-buytrigger.png",
+        "role": "free_spins"
+      },
+      {
+        "file": "free_spins-buyoutro.png",
+        "role": "free_spins"
+      },
+      {
+        "file": "modal-settings.png",
+        "role": "modal"
+      },
+      {
+        "file": "free_spins-outro2.png",
+        "role": "free_spins"
+      },
+      {
+        "file": "wintier-mega.png",
+        "role": "wintier"
+      },
+      {
+        "file": "modal-bet-panel.png",
+        "role": "modal"
+      }
+    ]
+  },
+  "coverage": {
+    "required": [
+      "base_spin",
+      "cascade",
+      "win",
+      "free_spins",
+      "buy_feature",
+      "paytable"
+    ],
+    "observed": [
+      "base_spin",
+      "win",
+      "free_spins",
+      "buy_feature"
+    ],
+    "missing": [
+      "paytable"
+    ],
+    "confirmed_absent": [
+      "cascade"
+    ],
+    "complete": false
+  }
+}
