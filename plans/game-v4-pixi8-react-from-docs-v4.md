@@ -1,6 +1,6 @@
-# Plan: Game v2 — Luxor of Cleopatra từ docs v4 (PixiJS v8 + TypeScript + React)
+# Plan: Game v4 — Luxor of Cleopatra từ docs v4 (PixiJS v8 + TypeScript + React)
 
-Code mới hoàn toàn trong `game-v2/`. Nguồn tham chiếu DUY NHẤT: `docs/luxor-of-cleopatra-v4/`
+Code mới hoàn toàn trong `game-v4/`. Nguồn tham chiếu DUY NHẤT: `docs/luxor-of-cleopatra-v4/`
 (docs md + game-spec.json phần `math.paytable` + screenshots). Áp dụng các correction đã
 verify trong `docs/luxor-of-cleopatra-v4/ai-agent-problems.md`.
 
@@ -51,7 +51,7 @@ amount** is added") — không phải mỗi wild một draw như event-order dra
 pnpm + Vite + TypeScript strict + React 18 + PixiJS v8 + zustand + vitest.
 
 ```
-game-v2/
+game-v4/
   index.html  package.json  tsconfig.json  vite.config.ts
   src/
     engine/               # thuần TS, KHÔNG import pixi/react — testable, tách được ra package

@@ -122,7 +122,7 @@ yet` dòng 46; pre-mark nằm trong spin 1 ở step 3d dòng 51), nhưng:
   A chạy 4 reel (A c1 → wild → wild → A c4, weighted 4) = $12.00; K chạy 4 reel (weighted 6)
   = $18.00; 9 chạy 3 reel (weighted 6) = $1.80. Tổng đúng của board = **$71.80**, không phải $40.
 - **Việc cần làm:** đổi các ô đệm quanh wild để không symbol nào khác nối được run
-  (hoặc cập nhật expected total thành $71.80). Phát hiện khi build engine v2 từ docs —
+  (hoặc cập nhật expected total thành $71.80). Phát hiện khi build game-v4 từ docs —
   vector này fail nếu assert tổng.
 
 ## 9. Rác generate cuối file
