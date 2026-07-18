@@ -115,6 +115,16 @@ yet` dòng 46; pre-mark nằm trong spin 1 ở step 3d dòng 51), nhưng:
   **$52.00**" không có increment nào được nêu cho +$2 (hợp lệ — increment 1× = $2 tồn tại
   trong bảng 1-wild — nhưng vector phải khai báo tường minh để dùng làm golden test).
 
+## 8b. `test-vectors.md` TV-09 — board tự sinh side-wins không được tính trong "Then"
+
+- **Sai (TV-09, dòng 68-78):** "Then" chỉ tính cleopatra run-5 ×4 = **$40.00**, nhưng board
+  GIVEN còn tạo thêm các run khác đi QUA 2 wild (reels 2-3) theo đúng win rule của chính docs:
+  A chạy 4 reel (A c1 → wild → wild → A c4, weighted 4) = $12.00; K chạy 4 reel (weighted 6)
+  = $18.00; 9 chạy 3 reel (weighted 6) = $1.80. Tổng đúng của board = **$71.80**, không phải $40.
+- **Việc cần làm:** đổi các ô đệm quanh wild để không symbol nào khác nối được run
+  (hoặc cập nhật expected total thành $71.80). Phát hiện khi build engine v2 từ docs —
+  vector này fail nếu assert tổng.
+
 ## 9. Rác generate cuối file
 
 - `game-features.md:15-17` dính `<<<END>>>` + "This is all the response, Coder".
